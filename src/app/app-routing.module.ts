@@ -5,7 +5,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
   {path: '', component: SidebarComponent},
-  {path: 'perfil/:id', component: PerfilComponent}
+  {path: ':id', component: PerfilComponent}
 ];
 
 @NgModule({

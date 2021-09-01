@@ -9,9 +9,9 @@ import { ContatoService } from '../contato.service';
 })
 
 export class SidebarComponent implements OnInit {
-  
+
   contatos: Array<any> = [];
- 
+
   constructor(private contatoService: ContatoService, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
@@ -23,7 +23,7 @@ export class SidebarComponent implements OnInit {
   }
 
   onClick(contatoId: number){
-    this.router.navigate(['/perfil', contatoId]);
+    this.router.navigate([contatoId]);
   }
 
 }

@@ -1,6 +1,9 @@
-export class Perfil{
-    id: number | undefined;
-    name: string | undefined;
-    email: string | undefined;
-    about: string | undefined;
+export interface Perfil{
+    id: number;
+    photo: string;
+    name: string;
+    email: string;
+    about: string;
 }
+
+export type Perfilador = Array<Perfil>
