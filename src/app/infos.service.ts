@@ -1,4 +1,4 @@
-import { Perfil, Perfilador } from './perfil/perfil';
+import { Perfil } from './perfil/perfil';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -11,12 +11,19 @@ const apiURL = "https://60c8b73dafc88600179f7da1.mockapi.io/contacts/";
 })
 export class InfosService {
 
-
   constructor(private http: HttpClient) { }
 
-  listarInfoParametros(id: number): Observable<any> {
+  // getPerfil(): Observable<any> {
+  //   return this.http.get(apiURL);
+  // }
+
+  getComponentPerfil(perfilId: string): Observable<any>{
+    let params = new HttpParams().set("id", perfilId);
+    return this.http.get(apiURL, {params: params});
+  }
+
+  listarInfoParametros(id: string): Observable<any> {
     const idurl = `${apiURL}${id}`;
     return this.http.get<any[]>(idurl);
-
   }
 }

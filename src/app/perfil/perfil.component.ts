@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { RouterModule, ActivatedRoute, Routes } from '@angular/router';
 import { InfosService } from './../infos.service';
 import { Component, OnInit } from '@angular/core';
-import { Perfil, Perfilador } from './perfil';
+import { Perfil } from './perfil';
 
 @Component({
   selector: 'app-perfil',
@@ -13,14 +13,22 @@ import { Perfil, Perfilador } from './perfil';
 
 export class PerfilComponent implements OnInit {
 
-   infos: Array<Perfil> = [];
+  infos: Array<Perfil> = [];
 
   constructor(private infosService: InfosService,
-     route: ActivatedRoute) {
-}
+     route: ActivatedRoute) {}
 
   ngOnInit(): void {
-   this.infosService.listarInfoParametros(1).subscribe(data => {this.infos = data})
+    this.perfilSelecionado;
+    this.conteudoPerfil;
+  }
+
+  conteudoPerfil(id: any){
+    this.infosService.listarInfoParametros(id).subscribe(data => {this.infos = data});
+  }
+
+  perfilSelecionado(perfilId: any):void{
+    this.infosService.getComponentPerfil(perfilId).subscribe(data => this.infos = data);
   }
 }
 

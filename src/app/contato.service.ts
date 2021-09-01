@@ -1,4 +1,4 @@
-import { Perfilador } from './perfil/perfil';
+import { Perfil } from './perfil/perfil';
 import { Injectable } from '@angular/core';
 import {HttpClient } from '@angular/common/http';
 
@@ -12,6 +12,6 @@ export class ContatoService {
   constructor(private http: HttpClient) { }
 
   listar(){
-    return this.http.get<Perfilador[]>(contatosUrl);
+    return this.http.get<Perfil[]>(contatosUrl);
   }
 }
