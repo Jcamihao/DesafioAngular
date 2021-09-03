@@ -22,8 +22,8 @@ export class InfosService {
     return this.http.get<Perfil[]>(apiURL, {params: params});
   }
 
-  listarInfoParametros(id: string): Observable<any> {
-    const idurl = `${apiURL}${id}`;
+  listarInfoParametros(): Observable<any> {
+    const idurl = `${apiURL}`;
     return this.http.get<Perfil[]>(idurl);
   }
 }

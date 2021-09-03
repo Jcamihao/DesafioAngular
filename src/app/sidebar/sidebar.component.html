@@ -1,49 +1,46 @@
-<div class="geral">
-  <div class="cabecalho">
-    <img src="https://www.gstatic.com/images/branding/product/1x/contacts_48dp.png" alt="perfil contatos"
-      class="img_perfil">
-    <!-- <img class="lupa" src="../../assets/images/searchIcon.svg" /> -->
-    <div class="titulo">Contatos</div>
-    <input id="procuracao" type="text" placeholder="Pesquisar" onkeyup="myFunction()"/>
-    <div class="resultados">
-      <a href="#">
+<div class="cabecalho">
+  <img src="https://www.gstatic.com/images/branding/product/1x/contacts_48dp.png" alt="perfil contatos"
+    class="img_perfil">
+  <div class="titulo">Contatos</div>
+  <input id="procuracao" type="text" placeholder="Pesquisar" onkeyup="myFunction()" />
+  <!-- <button type="submit" class="lupa">
+      <i class="lupa" class="fa fa-search"></i>
+    </button> -->
+</div>
 
-      </a>
-    </div>
+
+
+<div class="procurar">
+  <div id="searchBox">
+    <!-- <img class="mic" src="../../assets/images/voiceIcon.svg"> -->
+    <!-- <input id="procuracao" type="text" placeholder="Pesquisar" /> -->
+    <input id="procuracaodois" type="text" placeholder="Pesquisar" onkeyup="myFunction()" />
+    <div class="contato_header">Contatos</div>
+    <div class="email_header">Email</div>
+    <div class="phone_header">Telefone</div>
+    <div class="espaco"></div>
   </div>
-
-
-  <div class="procurar">
-    <div id="searchBox">
-      <!-- <img class="mic" src="../../assets/images/voiceIcon.svg"> -->
-      <!-- <input id="procuracao" type="text" placeholder="Pesquisar" /> -->
-      <div class="contato_header">Contatos</div>
-      <div class="email_header">Email</div>
-      <div class="phone_header">Telefone</div>
-      <div class="espaco"></div>
-    </div>
-  </div>
+</div>
 
 
 
-  <div id="contatos" *ngFor="let contato of contatos">
-    <div (click)="onClick(contato.id)">
-      <a [routerLink]="[ contato.id ]">
-        <div class="conversa">
-          <div class="none"> {{contato.id}} </div>
-          <div class="avatar">
-            <img [src]="contato.photo">
-          </div>
-          <div class="conteudo">
-            <div class="titulo">
-              <div class="nome">{{contato.name}}</div>
-            </div>
-            <div class="email">{{contato.email}}</div>
-            <div class="phone">{{contato.phone}}</div>
-          </div>
+<div id="contatos" *ngFor="let contato of contatos">
+  <div (click)="onClick(contato.id)">
+    <a [routerLink]="[ contato.id ]">
+      <div class="conversa">
+        <div class="none"> {{contato.id}} </div>
+        <div class="avatar">
+          <img [src]="contato.photo">
         </div>
-      </a>
-    </div>
+        <div class="conteudo">
+          <div class="titulo">
+            <div class="nome">{{contato.name}}</div>
+          </div>
+          <div class="email">{{contato.email}}</div>
+          <div class="phone">{{contato.phone}}</div>
+        </div>
+      </div>
+    </a>
   </div>
 </div>
 
@@ -68,4 +65,4 @@
       }
     }
   }
-  </script>
+</script>

@@ -19,16 +19,16 @@ export class PerfilComponent implements OnInit {
      route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.perfilSelecionado;
-    this.conteudoPerfil;
+    // this.perfilSelecionado();
+    this.conteudoPerfil();
   }
 
-  conteudoPerfil(id: any){
-    this.infosService.listarInfoParametros(id).subscribe(data => {this.infos = data});
+  conteudoPerfil(){
+    this.infosService.listarInfoParametros().subscribe(data => {this.infos = data});
   }
 
-  perfilSelecionado(perfilId: string):void{
-    this.infosService.getComponentPerfil(perfilId).subscribe(data => {this.infos = data});
-  }
+  // perfilSelecionado(perfilId: string):void{
+  //   this.infosService.getComponentPerfil(perfilId).subscribe(data => {this.infos = data});
+  // }
 }
 

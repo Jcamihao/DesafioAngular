@@ -1,23 +1,34 @@
 <div id="geral">
-  <div id="header">
-    <a routerLink="">
-      <div class="voltarHome">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Antu_arrow-left.svg" alt="">
-      </div>
-    </a>
-    <div class="classe" *ngFor="let info of infos!">
-      <div class="nomeHeader">{{info.name}}
-      </div>
+  <div class="cabecalho">
+    <img src="https://www.gstatic.com/images/branding/product/1x/contacts_48dp.png" alt="perfil contatos"
+      class="img_perfil">
+    <div class="titulo">Contatos</div>
+    <input id="procuracao" type="text" placeholder="Pesquisar" onkeyup="myFunction()" />
+    <!-- <button type="submit" class="lupa">
+        <i class="lupa" class="fa fa-search"></i>
+      </button> -->
+  </div>
 
-      <div id="corpo">
-        <div class="disfarce">
-          <img [src]="info.photo" class="fotoPerfil">
 
-          <div class="nome">{{info.name}}</div>
+  <div class="classe" *ngFor="let info of infos!">
+    <div id="corpo">
+      <div class="disfarce">
 
-          <div class="email">{{info.email}}</div>
+        <img [src]="info.photo" class="fotoPerfil">
 
-          <div class="mensagem">{{info.about}}</div>
+        <div class="voltarHome">
+          <img src="" alt="">
+        </div>
+
+        <div class="nome">{{info.name}}</div>
+
+        <div class="linha"></div>
+
+        <div class="email">{{info.email}}</div>
+
+        <div class="mensagem">
+          <p class="detalhes">Detalhes do contato</p>
+          <p class="telefone">{{info.phone}}</p>
         </div>
       </div>
     </div>

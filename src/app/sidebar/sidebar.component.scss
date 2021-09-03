@@ -25,6 +25,10 @@
       width   : 7%;
       right   : 25%;
     }
+
+    #procuracao {
+      display: none;
+    }
   }
 
 
@@ -41,7 +45,7 @@
     //   left    : 73%;
     // }
 
-    #procuracao {
+    #procuracaodois {
       position  : relative;
       width     : 90%;
       border    : 1px solid white;
@@ -49,6 +53,7 @@
       left      : 15px;
       text-align: left;
       font-size : 18px;
+      outline: none;
 
       &::placeholder {
         color      : rgb(83, 83, 83);
@@ -59,11 +64,33 @@
     .contato_header {
       position      : relative;
       left          : 15.5px;
-      top           : 24px;
+      top           : 28px;
       font-size     : 12px;
       text-transform: uppercase;
       color         : rgb(112, 112, 112);
       font-weight   : 600;
+    }
+
+    .email_header {
+      position      : absolute;
+      left          : 40%;
+      top           : 48px;
+      font-size     : 12px;
+      text-transform: uppercase;
+      color         : rgb(112, 112, 112);
+      font-weight   : 600;
+      display       : none;
+    }
+
+    .phone_header {
+      position      : absolute;
+      left          : 70%;
+      top           : 48px;
+      font-size     : 12px;
+      text-transform: uppercase;
+      color         : rgb(112, 112, 112);
+      font-weight   : 600;
+      display       : none;
     }
   }
 
@@ -121,6 +148,10 @@
         .email {
           display: none;
         }
+
+        .phone {
+          display: none;
+        }
       }
     }
   }
@@ -140,166 +171,54 @@
 }
 
 @media only screen and (min-width: 577px) {
-  //   .tituloLista {
-  //     position    : absolute;
-  //     top         : 2px;
-  //     display     : flex;
-  //     color       : white;
-  //     font-size   : 24px;
-  //     padding-left: 23px;
-  //     padding-top : 25px;
-  //   }
-
-  //   .procurar {
-  //     position        : absolute;
-  //     top             : 80.5px;
-  //     height          : 45px;
-  //     background-color: white;
-  //     width           : 100%;
-
-  //     .mic {
-  //       display : none;
-  //       position: relative;
-  //       top     : 8px;
-  //       width   : 1.8%;
-  //       left    : 90%;
-  //     }
-
-  //     .lupa {
-  //       position   : relative;
-  //       top        : 10px;
-  //       width      : 2%;
-  //       margin-left: 28px;
-  //     }
-
-  //     #procuracao {
-  //       position  : relative;
-  //       width     : 50%;
-  //       border    : 1px solid white;
-  //       top       : 1.1px;
-  //       left      : 20px;
-  //       text-align: left;
-  //       font-size : 17px;
-
-  //       &::placeholder {
-  //         color      : #9a9a9a;
-  //         font-weight: 100;
-  //       }
-  //     }
-  //   }
-
-  //   .espaco {
-  //     position        : relative;
-  //     top             : 10px;
-  //     background-color: rgb(199, 197, 197);
-  //     height          : 80px;
-  //   }
-
-  //   #contatos {
-  //     .conversa {
-  //       position: relative;
-  //       top     : 6.8vh;
-  //       width   : 100%;
-  //       height  : 67px;
-  //       display : flex;
-
-  //       &:hover {
-  //         background-color: #eeecec;
-  //       }
-
-  //       background-color: white;
-
-  //       .avatar {
-  //         flex-basis     : 73px;
-  //         height         : 100%;
-  //         display        : flex;
-  //         align-items    : center;
-  //         justify-content: center;
-
-  //         img {
-  //           max-width    : 100%;
-  //           width        : 50px;
-  //           border-radius: 35px;
-  //         }
-  //       }
-
-  //       .nome {
-  //         font-size  : 16px;
-  //         padding-top: 5px;
-  //       }
-
-  //       .conteudo {
-  //         border-bottom: 2px solid #f2f2f2;
-  //         flex-grow    : 1;
-  //         padding      : 10px 0px 0px 0px;
-
-  //         .titulo {
-  //           display        : flex;
-  //           flex-direction : row;
-  //           justify-content: space-between;
-  //         }
-
-  //         .mensagem {
-  //           padding-top: 5px;
-  //           font-size  : 12.5px;
-  //           color      : #9a9a9a;
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   .none {
-  //     display: none;
-  //   }
-
-  //   a {
-  //     text-decoration: none;
-  //     color          : black;
-  //   }
-  // }
-  .geral {}
-
   .cabecalho {
     .titulo {
       position   : absolute;
-      top        : 8px;
+      top        : 17px;
       display    : flex;
       color      : rgb(75, 74, 74);
-      font-size  : 23px;
-      left       : 6%;
+      font-size  : 20px;
+      left       : 5.7%;
       padding-top: 15px;
     }
 
     .img_perfil {
       position : absolute;
       max-width: 100%;
-      width    : 2.5%;
-      top      : 14px;
-      left     : 3%;
+      width    : 2.1%;
+      top      : 21px;
+      left     : 3.3%;
     }
 
-    .lupa {
-      position: absolute;
-      top     : 4px;
-      width   : 7%;
-      right   : 25%;
-    }
+    // .lupa {
+    //   position: absolute;
+    //   top     : 20px;
+    //   height  : 3.6%;
+    //   width   : 1.8%;
+    //   left    : 18.1%;
+    // }
 
     #procuracao[type=text] {
-      position          : relative;
-      height            : 35px;
-      border            : 1px solid white;
-      bottom            : 72px;
-      left              : 20%;
-      text-align        : left;
-      background-color  : rgb(236, 236, 236);
-      border-radius     : 12px;
-      width             : 130px;
-      -webkit-transition: width 0.4s ease-in-out;
-      transition        : width 0.4s ease-in-out;
+      position           : relative;
+      height             : 35px;
+      border             : 1px solid white;
+      bottom             : 79px;
+      left               : 18%;
+      text-align         : left;
+      background-color   : rgb(236, 236, 236);
+      background-image   : url('../../assets/images/searchIcon.svg');
+      background-position: 10px 10px;
+      background-repeat  : no-repeat;
+      padding            : 6px 0px 5px 40px;
+      border-radius      : 8px;
+      width              : 130px;
+      -webkit-transition : width 0.4s ease-in-out;
+      transition         : width 0.4s ease-in-out;
+      outline: none;
 
       &:focus[type=text] {
-        width: 60%;
+        width : 50%;
+        border: none;
       }
 
       &::placeholder {
@@ -311,34 +230,15 @@
     }
   }
 
-
   .procurar {
     position: absolute;
     top     : 80.5px;
     height  : 50px;
     width   : 100%;
 
-    // .mic {
-    //   position: relative;
-    //   top     : 8px;
-    //   width   : 6%;
-    //   left    : 73%;
-    // }
-
-    // #procuracao {
-    //   position  : relative;
-    //   width     : 90%;
-    //   border    : 1px solid white;
-    //   top       : 2.1px;
-    //   left      : 15px;
-    //   text-align: left;
-    //   font-size : 18px;
-
-    //   &::placeholder {
-    //     color      : rgb(83, 83, 83);
-    //     font-weight: 100;
-    //   }
-    // }
+    #procuracaodois {
+      display: none;
+    }
 
     .contato_header {
       position      : absolute;
@@ -407,8 +307,10 @@
       }
 
       .nome {
-        font-size  : 15.2px;
+        font-size  : .875rem;
+        line-height: 1.25rem;
         padding-top: 15px;
+        color      : rgb(73, 73, 73);
       }
 
       .conteudo {
@@ -423,19 +325,19 @@
         }
 
         .email {
-          position         : absolute;
-          bottom           : 25px;
-          font-size        : 14px;
-          // color         : #9a9a9a;
-          left             : 40%;
+          position : absolute;
+          bottom   : 25px;
+          font-size: .875rem;
+          color    : rgb(73, 73, 73);
+          left     : 40%;
         }
 
         .phone {
-          position         : absolute;
-          bottom           : 25px;
-          font-size        : 14px;
-          // color         : #9a9a9a;
-          left             : 70%;
+          position : absolute;
+          bottom   : 25px;
+          font-size: .875rem;
+          color    : rgb(73, 73, 73);
+          left     : 70%;
         }
       }
     }

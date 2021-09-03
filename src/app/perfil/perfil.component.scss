@@ -1,127 +1,337 @@
-@media only screen and (max-width: 576px){
+@media only screen and (max-width: 576px) {
 
-    #header{
-        .voltarHome{
-            position: absolute;
-            padding-left: 9px;
-            top: 2.7%;
-            max-width: 100%;
-            width: 27px;
-        }
-        .nomeHeader{
-            position: absolute;
-            font-size: 24px;
-            top: 2.75%;
-            color: white;
-            left: 16%;
-        }
+  //   #header {
+  //     .voltarHome {
+  //       position    : absolute;
+  //       padding-left: 9px;
+  //       top         : 2.7%;
+  //       max-width   : 100%;
+  //       width       : 27px;
+  //     }
+
+  //     .nomeHeader {
+  //       position : absolute;
+  //       font-size: 24px;
+  //       top      : 2.75%;
+  //       color    : white;
+  //       left     : 16%;
+  //     }
+  //   }
+
+  //   #corpo {
+  //     .disfarce {
+  //       position        : absolute;
+  //       background-color: white;
+  //       width           : 100%;
+  //       height          : 80vh;
+  //     }
+
+  //     .fotoPerfil {
+  //       position     : relative;
+  //       max-width    : 100%;
+  //       width        : 100px;
+  //       top          : 23px;
+  //       left         : 35.2%;
+  //       border-radius: 50px;
+  //     }
+
+  //     .nome {
+  //       text-align: center;
+  //       position  : relative;
+  //       top       : 22%;
+  //       font-size : 25px;
+  //     }
+
+  //     .email {
+  //       text-align: center;
+  //       position  : relative;
+  //       top       : 24%;
+  //       color     : #9a9a9a;
+  //     }
+
+  //     .mensagem {
+  //       position  : absolute;
+  //       color     : #818181;
+  //       top       : 31%;
+  //       border    : 1px solid rgb(221, 221, 221);
+  //       margin    : 38px;
+  //       padding   : 25px;
+  //       width     : 80%;
+  //       box-sizing: border-box;
+
+  //     }
+  //   }
+
+  .cabecalho {
+    .titulo {
+      position   : absolute;
+      top        : 14px;
+      display    : flex;
+      color      : rgb(75, 74, 74);
+      font-size  : 20px;
+      left       : 5.7%;
+      padding-top: 15px;
     }
 
-    #corpo{
-        .disfarce{
-            position: absolute;
-            background-color: white;
-            width: 100%;
-            height: 80vh;
-        }
-        .fotoPerfil{
-            position: absolute;
-            max-width: 100%;
-            width: 100px;
-            top: 23px;
-            left: 35.2%;
-            border-radius: 50px;
-        }
-
-        .nome{
-            text-align: center;
-            position: relative;
-            top: 22%;
-            font-size: 25px;
-        }
-
-        .email{
-            text-align: center;
-            position: relative;
-            top: 24%;
-            color: #9a9a9a; 
-        }
-
-        .mensagem{
-            position: absolute;
-            color: #818181;
-            top: 31%;
-            border: 1px solid rgb(221, 221, 221);
-            margin: 38px;
-            padding: 25px;
-            width: 80%;
-            box-sizing: border-box;
-
-        }
+    .img_perfil {
+      position : absolute;
+      max-width: 100%;
+      width    : 10%;
+      top      : 21px;
+      right    : 5%;
     }
+
+    // .lupa {
+    //   position: absolute;
+    //   top     : 20px;
+    //   height  : 3.6%;
+    //   width   : 1.8%;
+    //   left    : 18.1%;
+    // }
+
+    #procuracao[type=text] {
+      position           : relative;
+      height             : 35px;
+      border             : 1px solid white;
+      bottom             : 65px;
+      left               : 30%;
+      text-align         : left;
+      background-color   : rgb(236, 236, 236);
+      background-image   : url('../../assets/images/searchIcon.svg');
+      background-position: 10px 10px;
+      background-repeat  : no-repeat;
+      padding            : 6px 0px 5px 40px;
+      border-radius      : 8px;
+      width              : 75px;
+      -webkit-transition : width 0.4s ease-in-out;
+      transition         : width 0.4s ease-in-out;
+      outline            : none;
+
+      &:focus[type=text] {
+        width : 39%;
+        border: none;
+      }
+
+      &::placeholder {
+        color      : rgb(156, 156, 156);
+        font-size  : 15px;
+        font-weight: 100;
+
+      }
+    }
+  }
+
+  #corpo {
+    .voltarHome {
+      position : absolute;
+      left     : 5%;
+      top      : 2.7%;
+      max-width: 100%;
+      width    : 27px;
+
+    }
+
+    .disfarce {
+      position        : absolute;
+      background-color: white;
+      width           : 100%;
+      height          : 80vh;
+    }
+
+    .fotoPerfil {
+      position     : absolute;
+      max-width    : 100%;
+      width        : 272px;
+      height       : 272px;
+      top          : 0px;
+      left         : 13.5%;
+      border-radius: 150px;
+
+    }
+
+    .nome {
+      position : relative;
+      top      : 44%;
+      font-size: 25px;
+      left     : 26%;
+    }
+
+    .linha {
+      position: relative;
+      border  : 1px solid rgb(228, 227, 227);
+      top     : 50%;
+    }
+
+    .email {
+      text-align: center;
+      position  : relative;
+      top       : 24%;
+      color     : #9a9a9a;
+      display   : none;
+    }
+
+    .mensagem {
+      position     : absolute;
+      color        : #313131;
+      text-align   : left;
+      top          : 58%;
+      border       : 1px solid rgb(221, 221, 221);
+      left         : 2%;
+      // margin       : 30px;
+      padding      : 0px 0px 5px 25px;
+      width        : 95%;
+      border-radius: 12px;
+      box-sizing   : border-box;
+
+      .detalhes {
+        font-size     : 1rem;
+        font-weight   : 600;
+        letter-spacing: .01785714em;
+      }
+
+      .telefone {
+        font-size     : .875rem;
+        letter-spacing: .01428571em;
+      }
+    }
+  }
 }
 
-@media only screen and (min-width: 576px){
 
-    
-    #header{
-        .voltarHome{
-            position: absolute;
-            left: 5%;
-            top: 2.7%;
-            max-width: 100%;
-            width: 27px;
-        }
-        .nomeHeader{
-            position: absolute;
-            font-size: 24px;
-            top: 2.75%;
-            color: white;
-            left: 9%;
-        }
+
+
+@media only screen and (min-width: 576px) {
+
+  .cabecalho {
+    .titulo {
+      position   : absolute;
+      top        : 17px;
+      display    : flex;
+      color      : rgb(75, 74, 74);
+      font-size  : 20px;
+      left       : 5.7%;
+      padding-top: 15px;
     }
-    
-    #corpo{
-        .disfarce{
-            position: absolute;
-            background-color: white;
-            width: 100%;
-            height: 80vh;
-        }
-        .fotoPerfil{
-            position: absolute;
-            max-width: 100%;
-            width: 100px;
-            top: 23px;
-            left: 47.25%;
-            border-radius: 50px;
-        }
-    
-        .nome{
-            text-align: center;
-            position: relative;
-            top: 22%;
-            font-size: 25px;
-        }
-    
-        .email{
-            text-align: center;
-            position: relative;
-            top: 24%;
-            color: #9a9a9a; 
-        }
-    
-        .mensagem{
-            position: absolute;
-            color: #818181;
-            text-align: center;
-            top: 31%;
-            border: 1px solid rgb(221, 221, 221);
-            left: 7.25%;
-            margin: 38px;
-            padding: 25px;
-            width: 80%;
-            box-sizing: border-box;
-        }
+
+    .img_perfil {
+      position : absolute;
+      max-width: 100%;
+      width    : 2.1%;
+      top      : 21px;
+      left     : 3.3%;
     }
+
+    // .lupa {
+    //   position: absolute;
+    //   top     : 20px;
+    //   height  : 3.6%;
+    //   width   : 1.8%;
+    //   left    : 18.1%;
+    // }
+
+    #procuracao[type=text] {
+      position           : relative;
+      height             : 35px;
+      border             : 1px solid white;
+      bottom             : 79px;
+      left               : 18%;
+      text-align         : left;
+      background-color   : rgb(236, 236, 236);
+      background-image   : url('../../assets/images/searchIcon.svg');
+      background-position: 10px 10px;
+      background-repeat  : no-repeat;
+      padding            : 6px 0px 5px 40px;
+      border-radius      : 8px;
+      width              : 130px;
+      -webkit-transition : width 0.4s ease-in-out;
+      transition         : width 0.4s ease-in-out;
+      outline            : none;
+
+      &:focus[type=text] {
+        width : 50%;
+        border: none;
+      }
+
+      &::placeholder {
+        color      : rgb(156, 156, 156);
+        font-size  : 15px;
+        font-weight: 100;
+
+      }
+    }
+  }
+
+  #corpo {
+
+    .voltarHome {
+      position : absolute;
+      left     : 5%;
+      top      : 2.7%;
+      max-width: 100%;
+      width    : 27px;
+
+    }
+
+    .disfarce {
+      position        : absolute;
+      background-color: white;
+      width           : 100%;
+      height          : 80vh;
+    }
+
+    .fotoPerfil {
+      position     : absolute;
+      max-width    : 100%;
+      width        : 162px;
+      top          : 0px;
+      left         : 4%;
+      border-radius: 150px;
+    }
+
+    .nome {
+      position : relative;
+      top      : 8%;
+      font-size: 25px;
+      left     : 14%;
+    }
+
+    .linha {
+      position: relative;
+      border  : 1px solid rgb(228, 227, 227);
+      top     : 19%;
+    }
+
+    .email {
+      text-align: center;
+      position  : relative;
+      top       : 24%;
+      color     : #9a9a9a;
+      display   : none;
+    }
+
+    .mensagem {
+      position     : absolute;
+      color        : #313131;
+      // text-align: left;
+      top          : 21%;
+      border       : 1px solid rgb(221, 221, 221);
+      left         : 1.5%;
+      margin       : 30px;
+      padding      : 0px 0px 5px 25px;
+      width        : 22%;
+      border-radius: 12px;
+      box-sizing   : border-box;
+
+      .detalhes {
+        font-size     : 1rem;
+        font-weight   : 600;
+        letter-spacing: .01785714em;
+      }
+
+      .telefone {
+        font-size     : .875rem;
+        letter-spacing: .01428571em;
+      }
+    }
+  }
 }
