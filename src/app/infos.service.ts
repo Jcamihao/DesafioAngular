@@ -13,17 +13,17 @@ export class InfosService {
 
   constructor(private http: HttpClient) { }
 
-  // getPerfil(): Observable<any> {
-  //   return this.http.get(apiURL);
-  // }
+  getPerfil(): Observable<any> {
+    return this.http.get(apiURL);
+  }
 
   getComponentPerfil(perfilId: string): Observable<any>{
     let params = new HttpParams().set("id", perfilId);
-    return this.http.get(apiURL, {params: params});
+    return this.http.get<Perfil[]>(apiURL, {params: params});
   }
 
   listarInfoParametros(id: string): Observable<any> {
     const idurl = `${apiURL}${id}`;
-    return this.http.get<any[]>(idurl);
+    return this.http.get<Perfil[]>(idurl);
   }
 }

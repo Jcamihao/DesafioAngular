@@ -1,22 +1,25 @@
-<div id="geral" *ngFor="let info of infos!">
-    <div id="header">
-        <a routerLink="">
-            <div class="voltarHome">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Antu_arrow-left.svg" alt="">
-            </div>
-        </a>
-        <div class="nomeHeader">{{info.name}}</div>
-    </div>
+<div id="geral">
+  <div id="header">
+    <a routerLink="">
+      <div class="voltarHome">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Antu_arrow-left.svg" alt="">
+      </div>
+    </a>
+    <div class="classe" *ngFor="let info of infos!">
+      <div class="nomeHeader">{{info.name}}
+      </div>
 
-    <div id="corpo">
+      <div id="corpo">
         <div class="disfarce">
-            <img [src]="info.photo" class="fotoPerfil">
+          <img [src]="info.photo" class="fotoPerfil">
 
-            <div class="nome">{{info.name}}</div>
+          <div class="nome">{{info.name}}</div>
 
-            <div class="email">{{info.email}}</div>
+          <div class="email">{{info.email}}</div>
 
-            <div class="mensagem">{{info.about}}</div>
+          <div class="mensagem">{{info.about}}</div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
