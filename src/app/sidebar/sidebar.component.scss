@@ -26,7 +26,7 @@
       right   : 25%;
     }
 
-    #procuracao {
+    #myInput {
       display: none;
     }
   }
@@ -279,7 +279,7 @@
     margin-top: 8px;
   }
 
-  #myTable {
+  #contatos {
     width: 100%;
     .conversa {
       position: relative;
@@ -301,7 +301,7 @@
 
         img {
           max-width    : 100%;
-          width        : 47%;
+          width        : 70%;
           border-radius: 95px;
         }
       }
@@ -309,7 +309,7 @@
       .nome {
         font-size  : .875rem;
         line-height: 1.25rem;
-        padding-top: 15px;
+        padding-top: 20px;
         color      : rgb(73, 73, 73);
       }
 
@@ -326,7 +326,7 @@
 
         .email {
           position : absolute;
-          bottom   : 25px;
+          bottom   : 30px;
           font-size: .875rem;
           color    : rgb(73, 73, 73);
           left     : 40%;
@@ -334,7 +334,7 @@
 
         .phone {
           position : absolute;
-          bottom   : 25px;
+          bottom   : 30px;
           font-size: .875rem;
           color    : rgb(73, 73, 73);
           left     : 70%;

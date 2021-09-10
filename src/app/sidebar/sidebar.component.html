@@ -20,30 +20,7 @@
   </div>
 </div>
 
-<table id="myTable" *ngFor="let contato of contatos">
-  <div (click)="onClick(contato.id)">
-    <a [routerLink]="[ '', contato.id ]">
-      <div class="conversa">
-        <tr>
-          <th>
-            <div class="none"> {{contato.id}} </div>
-            <div class="avatar"> <img [src]="contato.photo"> </div>
-          </th>
-        </tr>
-
-        <tr class="conteudo">
-          <div class="titulo">
-            <div class="nome">{{contato.name}}</div>
-          </div>
-          <div class="email">{{contato.email}}</div>
-          <div class="phone">{{contato.phone}}</div>
-        </tr>
-      </div>
-    </a>
-  </div>
-</table>
-
-<!-- <div id="contatos" *ngFor="let contato of contatos | filter: filteredString">
+<div id="contatos" *ngFor="let contato of contatos">
   <div (click)="onClick(contato.id)">
     <a [routerLink]="[ '', contato.id ]">
       <div class="conversa">
@@ -61,7 +38,7 @@
       </div>
     </a>
   </div>
-</div> -->
+</div>
 
 <script>
 function myFunction() {
