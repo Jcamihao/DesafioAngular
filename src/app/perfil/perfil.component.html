@@ -1,24 +1,22 @@
+<!-- <div class="cor" *ngFor="let info of infos">
+  {{info.name}}
+  {{info.id}}
+</div> -->
+
 <div id="geral">
   <div class="cabecalho">
     <img src="https://www.gstatic.com/images/branding/product/1x/contacts_48dp.png" alt="perfil contatos"
       class="img_perfil">
     <div class="titulo">Contatos</div>
     <input id="procuracao" type="text" placeholder="Pesquisar" onkeyup="myFunction()" />
-    <!-- <button type="submit" class="lupa">
-        <i class="lupa" class="fa fa-search"></i>
-      </button> -->
   </div>
 
 
-  <div class="classe" *ngFor="let info of infos!">
+  <div class="classe" *ngFor="let info of infos">
     <div id="corpo">
       <div class="disfarce">
 
         <img [src]="info.photo" class="fotoPerfil">
-
-        <div class="voltarHome">
-          <img src="" alt="">
-        </div>
 
         <div class="nome">{{info.name}}</div>
 

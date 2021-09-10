@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Perfil } from './perfil/perfil';
+import { Component, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ContatoService } from './contato.service';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +9,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  conversation: any;
 
-  onConversationSelected(conversation: any){
-    this.conversation = conversation;
-  }
 }
 
 

@@ -170,18 +170,19 @@
       display   : none;
     }
 
+
     .mensagem {
-      position     : absolute;
-      color        : #313131;
-      text-align   : left;
-      top          : 58%;
-      border       : 1px solid rgb(221, 221, 221);
-      left         : 2%;
+      position        : absolute;
+      color           : #313131;
+      text-align      : left;
+      top             : 58%;
+      border          : 1px solid rgb(221, 221, 221);
+      left            : 2%;
       // margin       : 30px;
-      padding      : 0px 0px 5px 25px;
-      width        : 95%;
-      border-radius: 12px;
-      box-sizing   : border-box;
+      padding         : 0px 0px 5px 25px;
+      width           : 95%;
+      border-radius   : 12px;
+      box-sizing      : border-box;
 
       .detalhes {
         font-size     : 1rem;
@@ -193,6 +194,19 @@
         font-size     : .875rem;
         letter-spacing: .01428571em;
       }
+    }
+    .contato{
+      position        : absolute;
+      color           : #313131;
+      text-align      : left;
+      top             : 58%;
+      border          : 1px solid rgb(221, 221, 221);
+      left            : 2%;
+      // margin       : 30px;
+      padding         : 0px 0px 5px 25px;
+      width           : 95%;
+      border-radius   : 12px;
+      box-sizing      : border-box;
     }
   }
 }
@@ -333,5 +347,11 @@
         letter-spacing: .01428571em;
       }
     }
+  }
+
+  .cor{
+    position: absolute;
+    color: black;
+    border: 1px solid black;
   }
 }

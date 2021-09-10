@@ -3,8 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const apiURL = "https://60c8b73dafc88600179f7da1.mockapi.io/contacts/";
-
+const apiURL = "https://60c8b73dafc88600179f7da1.mockapi.io/contacts";
 
 @Injectable({
   providedIn: 'root'
@@ -17,13 +16,13 @@ export class InfosService {
     return this.http.get(apiURL);
   }
 
-  getComponentPerfil(perfilId: string): Observable<any>{
+  getComponentPerfil(perfilId: string): Observable<Perfil[]> {
     let params = new HttpParams().set("id", perfilId);
-    return this.http.get<Perfil[]>(apiURL, {params: params});
+    return this.http.get<Perfil[]>(apiURL, { params: params });
   }
 
-  listarInfoParametros(): Observable<any> {
-    const idurl = `${apiURL}`;
-    return this.http.get<Perfil[]>(idurl);
-  }
+    listarInfoParametros(id: number): Observable<any> {
+      const idurl = `${apiURL}${id}`;
+      return this.http.get<Perfil[]>(idurl);
+    }
 }

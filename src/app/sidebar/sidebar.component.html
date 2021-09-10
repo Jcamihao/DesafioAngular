@@ -2,19 +2,17 @@
   <img src="https://www.gstatic.com/images/branding/product/1x/contacts_48dp.png" alt="perfil contatos"
     class="img_perfil">
   <div class="titulo">Contatos</div>
-  <input id="procuracao" type="text" placeholder="Pesquisar" onkeyup="myFunction()" />
+  <input id="myInput" type="text" placeholder="Pesquisar" onkeyup="myFunction()"/>
   <!-- <button type="submit" class="lupa">
       <i class="lupa" class="fa fa-search"></i>
     </button> -->
 </div>
 
-
-
 <div class="procurar">
   <div id="searchBox">
     <!-- <img class="mic" src="../../assets/images/voiceIcon.svg"> -->
     <!-- <input id="procuracao" type="text" placeholder="Pesquisar" /> -->
-    <input id="procuracaodois" type="text" placeholder="Pesquisar" onkeyup="myFunction()" />
+    <input id="procuracaodois" type="text" placeholder="Pesquisar" />
     <div class="contato_header">Contatos</div>
     <div class="email_header">Email</div>
     <div class="phone_header">Telefone</div>
@@ -22,11 +20,32 @@
   </div>
 </div>
 
-
-
-<div id="contatos" *ngFor="let contato of contatos">
+<table id="myTable" *ngFor="let contato of contatos">
   <div (click)="onClick(contato.id)">
-    <a [routerLink]="[ contato.id ]">
+    <a [routerLink]="[ '', contato.id ]">
+      <div class="conversa">
+        <tr>
+          <th>
+            <div class="none"> {{contato.id}} </div>
+            <div class="avatar"> <img [src]="contato.photo"> </div>
+          </th>
+        </tr>
+
+        <tr class="conteudo">
+          <div class="titulo">
+            <div class="nome">{{contato.name}}</div>
+          </div>
+          <div class="email">{{contato.email}}</div>
+          <div class="phone">{{contato.phone}}</div>
+        </tr>
+      </div>
+    </a>
+  </div>
+</table>
+
+<!-- <div id="contatos" *ngFor="let contato of contatos | filter: filteredString">
+  <div (click)="onClick(contato.id)">
+    <a [routerLink]="[ '', contato.id ]">
       <div class="conversa">
         <div class="none"> {{contato.id}} </div>
         <div class="avatar">
@@ -42,27 +61,28 @@
       </div>
     </a>
   </div>
-</div>
-
+</div> -->
 
 <script>
-  function myFunction() {
-    // Declare variables
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById('myInput');
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName('li');
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
 
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName("a")[0];
-      txtValue = a.textContent || a.innerText;
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        li[i].style.display = "";
+        tr[i].style.display = "";
       } else {
-        li[i].style.display = "none";
+        tr[i].style.display = "none";
       }
     }
   }
+}
 </script>
