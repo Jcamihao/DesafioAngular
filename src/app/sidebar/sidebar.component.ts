@@ -36,11 +36,6 @@ export class SidebarComponent implements OnInit {
     } else this._url = url
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
-
   constructor(private contatoService: ContatoService, private route: ActivatedRoute, private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
