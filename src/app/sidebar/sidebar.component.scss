@@ -1,209 +1,38 @@
 @media only screen and (max-width: 576px) {
 
-  .cabecalho {
-    .titulo {
-      position    : absolute;
-      top         : 1px;
-      display     : flex;
-      color       : rgb(92, 91, 91);
-      font-size   : 23px;
-      padding-left: 16px;
-      padding-top : 20px;
-    }
-
-    .img_perfil {
-      position : absolute;
-      max-width: 100%;
-      width    : 12%;
-      top      : 1.6%;
-      right    : 30px;
-    }
-
-    .lupa {
-      position: absolute;
-      top     : 2.5%;
-      width   : 7%;
-      right   : 25%;
-    }
-
-    #myInput {
-      display: none;
-    }
+  .container-xxl {
+    margin : 0px;
+    padding: 0px;
   }
 
-
-  .procurar {
+  .cabecalho {
     position: absolute;
-    top     : 80.5px;
-    height  : 50px;
-    width   : 100%;
+    left    : 3px;
 
-    // .mic {
-    //   position: relative;
-    //   top     : 8px;
-    //   width   : 6%;
-    //   left    : 73%;
-    // }
-
-    #procuracaodois {
-      position  : relative;
-      width     : 90%;
-      border    : 1px solid white;
-      top       : 2.1px;
-      left      : 15px;
-      text-align: left;
-      font-size : 18px;
-      outline: none;
-
-      &::placeholder {
-        color      : rgb(83, 83, 83);
-        font-weight: 100;
-      }
-    }
-
-    .contato_header {
-      position      : relative;
-      left          : 15.5px;
-      top           : 28px;
-      font-size     : 12px;
-      text-transform: uppercase;
-      color         : rgb(112, 112, 112);
-      font-weight   : 600;
-    }
-
-    .email_header {
-      position      : absolute;
-      left          : 40%;
-      top           : 48px;
-      font-size     : 12px;
-      text-transform: uppercase;
-      color         : rgb(112, 112, 112);
-      font-weight   : 600;
-      display       : none;
-    }
-
-    .phone_header {
-      position      : absolute;
-      left          : 70%;
-      top           : 48px;
-      font-size     : 12px;
-      text-transform: uppercase;
-      color         : rgb(112, 112, 112);
-      font-weight   : 600;
-      display       : none;
-    }
-  }
-
-  .espaco {
-    position  : absolute;
-    border    : 1px solid rgb(216, 215, 215);
-    width     : 95%;
-    left      : 5.8px;
-    margin-top: 8px;
-  }
-
-  #contatos {
-    .conversa {
-
-      position: relative;
-      top     : 8vh;
-      width   : 100%;
-      height  : 67px;
-      display : flex;
-
-      &:hover {
-        background-color: #eeecec;
-      }
-
-      .avatar {
-        flex-basis     : 73px;
-        height         : 100%;
-        display        : flex;
-        align-items    : center;
-        justify-content: center;
-
-        img {
-          max-width    : 100%;
-          width        : 57%;
-          border-radius: 35px;
-        }
-      }
-
-      .nome {
-        font-size  : 15.2px;
-        padding-top: 15px;
-      }
-
-      .conteudo {
-        // border-bottom: 2px solid #f2f2f2;
-        flex-grow: 1;
-        padding  : 10px 0px 0px 0px;
-
-        .titulo {
-          display        : flex;
-          flex-direction : row;
-          justify-content: space-between;
-        }
-
-        .email {
-          display: none;
-        }
-
-        .phone {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .email_header {
-    display: none;
-  }
-
-  .none {
-    display: none;
-  }
-
-  a {
-    text-decoration: none;
-    color          : black;
-  }
-}
-
-@media only screen and (min-width: 577px) {
-  .cabecalho {
     .titulo {
-      position   : absolute;
-      top        : 17px;
-      display    : flex;
-      color      : rgb(75, 74, 74);
-      font-size  : 20px;
-      left       : 5.7%;
-      padding-top: 15px;
+      position : relative;
+      display  : flex;
+      color    : rgb(75, 74, 74);
+      font-size: 20px;
+      left     : 60px;
+      bottom   : 90px;
     }
 
     .img_perfil {
-      position : absolute;
+      position : relative;
       max-width: 100%;
-      width    : 2.1%;
-      top      : 21px;
-      left     : 3.3%;
+      width    : 50px;
+      bottom   : 58px;
+      left     : 5px;
     }
-
-    // .lupa {
-    //   position: absolute;
-    //   top     : 20px;
-    //   height  : 3.6%;
-    //   width   : 1.8%;
-    //   left    : 18.1%;
-    // }
 
     #myInput[type=text] {
       position           : relative;
-      height             : 35px;
+      height             : 45px;
       border             : 1px solid white;
-      bottom             : 79px;
-      left               : 18%;
+      outline            : none;
+      bottom             : 121px;
+      left               : 78%;
       text-align         : left;
       background-color   : rgb(236, 236, 236);
       background-image   : url('../../assets/images/searchIcon.svg');
@@ -211,81 +40,54 @@
       background-repeat  : no-repeat;
       padding            : 6px 0px 5px 40px;
       border-radius      : 8px;
-      width              : 130px;
-      -webkit-transition : width 0.4s ease-in-out;
-      transition         : width 0.4s ease-in-out;
-      outline: none;
+      width              : 100%;
 
-      &:focus[type=text] {
-        width : 50%;
-        border: none;
-      }
 
       &::placeholder {
         color      : rgb(156, 156, 156);
         font-size  : 15px;
         font-weight: 100;
-
       }
     }
   }
 
   .procurar {
     position: absolute;
-    top     : 80.5px;
-    height  : 50px;
+    top     : 125px;
     width   : 100%;
-
-    #procuracaodois {
-      display: none;
-    }
 
     .contato_header {
       position      : absolute;
-      left          : 42px;
-      top           : 48px;
+      top           : 15px;
       font-size     : 12px;
       text-transform: uppercase;
       color         : rgb(112, 112, 112);
       font-weight   : 600;
+      left          : 14px;
+
     }
 
     .email_header {
-      position      : absolute;
-      left          : 40%;
-      top           : 48px;
-      font-size     : 12px;
-      text-transform: uppercase;
-      color         : rgb(112, 112, 112);
-      font-weight   : 600;
+      display: none;
     }
 
     .phone_header {
-      position      : absolute;
-      left          : 70%;
-      top           : 48px;
-      font-size     : 12px;
-      text-transform: uppercase;
-      color         : rgb(112, 112, 112);
-      font-weight   : 600;
+      display: none;
     }
   }
 
-  .espaco {
-    position  : absolute;
-    border    : 1px solid rgb(216, 215, 215);
-    width     : 95%;
-    left      : 5.8px;
-    margin-top: 8px;
+  .linha {
+    position: relative;
+    border  : 1px solid rgb(216, 215, 215);
+    width   : 100%;
+    top     : 65px;
   }
 
   #contatos {
-    width: 100%;
     .conversa {
+      top     : 120px;
       position: relative;
-      top     : 2.5vh;
-      width   : 100%;
-      height  : 80px;
+      height  : 75px;
       display : flex;
 
       &:hover {
@@ -314,11 +116,227 @@
       }
 
       .conteudo {
-        // border-bottom: 2px solid #f2f2f2;
-        flex-grow: 1;
-        padding  : 10px 0px 0px 0px;
+        // flex-grow: 1;
+        padding: 10px 0px 0px 0px;
 
-        .titulo {
+        .nome {
+          display        : flex;
+          flex-direction : row;
+          justify-content: space-between;
+        }
+
+        .email {
+          display: none;
+        }
+
+        .phone {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .none {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+    color          : black;
+  }
+
+
+  .dropdown {
+    position: relative;
+    display : inline-block;
+    top     : 64px;
+    left    : 335px;
+  }
+
+  .dropdown-content {
+    display         : none;
+    position        : absolute;
+    background-color: #f9f9f9;
+    min-width       : 160px;
+    right           : 20px;
+    box-shadow      : 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index         : 1;
+  }
+
+  .dropdown-content a {
+    color          : black;
+    padding        : 12px 16px;
+    text-decoration: none;
+    display        : block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .cartao {
+    display: none;
+  }
+
+  .cartaophone {
+    position     : absolute;
+    border-radius: 50px;
+    height       : 50px;
+    width        : 50px;
+    font-weight  : 600;
+    left         : 300px;
+    top          : 740px;
+
+    .imgcard {
+      position: absolute;
+      height  : 20px;
+    }
+
+    .textocartao {
+      position   : absolute;
+      margin-left: 30px;
+    }
+  }
+}
+
+@media only screen and (min-width: 577px) {
+
+  .cabecalho {
+    width: 100%;
+
+    .titulo {
+      position : relative;
+      display  : flex;
+      color    : rgb(75, 74, 74);
+      font-size: 20px;
+      left     : 60px;
+      bottom   : 90px;
+    }
+
+    .img_perfil {
+      position : relative;
+      max-width: 100%;
+      width    : 3.5%;
+      bottom   : 58px;
+      left     : 5px;
+    }
+
+    #myInput[type=text] {
+      position           : relative;
+      height             : 45px;
+      border             : 1px solid white;
+      outline            : none;
+      bottom             : 120px;
+      left               : 75%;
+      text-align         : left;
+      background-color   : rgb(236, 236, 236);
+      background-image   : url('../../assets/images/searchIcon.svg');
+      background-position: 10px 10px;
+      background-repeat  : no-repeat;
+      padding            : 6px 0px 5px 40px;
+      border-radius      : 8px;
+      width              : 25%;
+
+
+      &::placeholder {
+        color      : rgb(156, 156, 156);
+        font-size  : 15px;
+        font-weight: 100;
+      }
+    }
+  }
+
+  .procurar {
+    position: absolute;
+    top     : 125px;
+    width   : 75%;
+
+    #procuracaodois {
+      display: none;
+    }
+
+    .contato_header {
+      position      : absolute;
+      top           : 15px;
+      font-size     : 12px;
+      text-transform: uppercase;
+      color         : rgb(112, 112, 112);
+      font-weight   : 600;
+      left          : 14px;
+
+    }
+
+    .email_header {
+      position      : absolute;
+      top           : 15px;
+      font-size     : 12px;
+      text-transform: uppercase;
+      color         : rgb(112, 112, 112);
+      font-weight   : 600;
+      left          : 520px;
+    }
+
+    .phone_header {
+      position      : absolute;
+      top           : 15px;
+      font-size     : 12px;
+      text-transform: uppercase;
+      color         : rgb(112, 112, 112);
+      font-weight   : 600;
+      left          : 1032px;
+    }
+  }
+
+  .linha {
+    position: relative;
+    border  : 1px solid rgb(216, 215, 215);
+    width   : 1295px;
+    top     : 65px;
+  }
+
+  #contatos {
+    width: 100%;
+
+    .conversa {
+      top     : 15px;
+      position: relative;
+      height  : 75px;
+      display : flex;
+
+      &:hover {
+        background-color: #eeecec;
+      }
+
+      .avatar {
+        flex-basis     : 73px;
+        height         : 100%;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+
+        img {
+          max-width    : 100%;
+          width        : 70%;
+          border-radius: 95px;
+        }
+      }
+
+      .nome {
+        font-size  : .875rem;
+        line-height: 1.25rem;
+        padding-top: 20px;
+        color      : rgb(73, 73, 73);
+      }
+
+      .conteudo {
+        // flex-grow: 1;
+        padding: 10px 0px 0px 0px;
+
+        .nome {
           display        : flex;
           flex-direction : row;
           justify-content: space-between;
@@ -337,7 +355,7 @@
           bottom   : 30px;
           font-size: .875rem;
           color    : rgb(73, 73, 73);
-          left     : 70%;
+          left     : 80%;
         }
       }
     }
@@ -351,6 +369,58 @@
     text-decoration: none;
     color          : black;
   }
+
+
+  .dropdown {
+    position: relative;
+    display : inline-block;
+    top     : -44px;
+    left    : 95%;
+  }
+
+  .dropdown-content {
+    display         : none;
+    position        : absolute;
+    background-color: #f9f9f9;
+    min-width       : 160px;
+    box-shadow      : 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index         : 1;
+  }
+
+  .dropdown-content a {
+    color          : black;
+    padding        : 12px 16px;
+    text-decoration: none;
+    display        : block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .cartao {
+    position     : relative;
+    border-radius: 50px;
+    height       : 50px;
+    width        : 150px;
+    font-weight  : 600;
+
+    .imgcard {
+      position: absolute;
+      height  : 20px;
+    }
+
+    .textocartao {
+      position   : absolute;
+      margin-left: 30px;
+    }
+  }
+
+  .cartaophone {
+    display: none;
+  }
 }
-
-

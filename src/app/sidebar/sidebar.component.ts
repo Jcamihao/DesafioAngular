@@ -1,9 +1,20 @@
+import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ContatoService } from '../contato.service';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
-import {MatSort} from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
+const contatosUrl = 'https://60c8b73dafc88600179f7da1.mockapi.io/contacts/';
+
+export interface Perfil {
+  id: number;
+  photo: string;
+  name: string;
+  phone: number;
+  email: string;
+  birthday: number;
+  about: string;
+}
 
 @Component({
   selector: 'app-sidebar',
@@ -13,9 +24,24 @@ import {MatSort} from '@angular/material/sort';
 
 export class SidebarComponent implements OnInit {
 
-  contatos: Array<any> = [];
+  contatos: Perfil[] = [];
+  filterTerm: string = '';
+  displayedColumns: string[] = ['name', 'photo', 'email'];
+  dataSource = new MatTableDataSource();
+  private _url = '';
 
-  constructor(private contatoService: ContatoService, private route: ActivatedRoute, private router: Router) { }
+  @Input() set url(url: string){
+    if(!url.startsWith('data')){
+      this._url = contatosUrl + url;
+    } else this._url = url
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  constructor(private contatoService: ContatoService, private route: ActivatedRoute, private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
     this.listar();
@@ -26,8 +52,7 @@ export class SidebarComponent implements OnInit {
   }
 
   onClick(contatoId: number) {
-    this.router.navigate([contatoId]);
+    this.router.navigate(['usuario', contatoId]);
   }
-
-
 }
+

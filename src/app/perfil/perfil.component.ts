@@ -20,8 +20,8 @@ export class PerfilComponent implements OnInit {
   constructor(private infosService: InfosService, private route: ActivatedRoute, private http: HttpClient, private router: Router,) { }
 
 
-  conteudoPerfil(id: any){
-    this.infosService.listarInfoParametros(id).subscribe(data => {this.infos = data});
+  conteudoPerfil(id: any) {
+    this.infosService.listarInfoParametros(id).subscribe(data => { this.infos = data });
   }
 
   perfilSelecionado(perfilId: any) {
@@ -29,12 +29,12 @@ export class PerfilComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      this.id = params['id']
+    this.route.params.subscribe((params: any) => {
+      this.id = params['id'];
       this.perfilSelecionado(this.id);
     });
   }
-
-
 }
+
+
 

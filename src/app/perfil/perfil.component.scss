@@ -1,141 +1,42 @@
 @media only screen and (max-width: 576px) {
 
-  //   #header {
-  //     .voltarHome {
-  //       position    : absolute;
-  //       padding-left: 9px;
-  //       top         : 2.7%;
-  //       max-width   : 100%;
-  //       width       : 27px;
-  //     }
-
-  //     .nomeHeader {
-  //       position : absolute;
-  //       font-size: 24px;
-  //       top      : 2.75%;
-  //       color    : white;
-  //       left     : 16%;
-  //     }
-  //   }
-
-  //   #corpo {
-  //     .disfarce {
-  //       position        : absolute;
-  //       background-color: white;
-  //       width           : 100%;
-  //       height          : 80vh;
-  //     }
-
-  //     .fotoPerfil {
-  //       position     : relative;
-  //       max-width    : 100%;
-  //       width        : 100px;
-  //       top          : 23px;
-  //       left         : 35.2%;
-  //       border-radius: 50px;
-  //     }
-
-  //     .nome {
-  //       text-align: center;
-  //       position  : relative;
-  //       top       : 22%;
-  //       font-size : 25px;
-  //     }
-
-  //     .email {
-  //       text-align: center;
-  //       position  : relative;
-  //       top       : 24%;
-  //       color     : #9a9a9a;
-  //     }
-
-  //     .mensagem {
-  //       position  : absolute;
-  //       color     : #818181;
-  //       top       : 31%;
-  //       border    : 1px solid rgb(221, 221, 221);
-  //       margin    : 38px;
-  //       padding   : 25px;
-  //       width     : 80%;
-  //       box-sizing: border-box;
-
-  //     }
-  //   }
-
   .cabecalho {
+    width : 100%;
+    margin: 0px;
+
+    width : 100%;
+    margin: 0px;
+
     .titulo {
-      position   : absolute;
-      top        : 14px;
-      display    : flex;
-      color      : rgb(75, 74, 74);
-      font-size  : 20px;
-      left       : 5.7%;
-      padding-top: 15px;
+      position : absolute;
+      bottom   : 765px;
+      display  : flex;
+      color    : rgb(75, 74, 74);
+      font-size: 20px;
+      left     : 72px;
     }
 
     .img_perfil {
       position : absolute;
       max-width: 100%;
-      width    : 10%;
-      top      : 21px;
-      right    : 5%;
+      width    : 13%;
+      bottom   : 750px;
+      left     : 20px;
     }
 
-    // .lupa {
-    //   position: absolute;
-    //   top     : 20px;
-    //   height  : 3.6%;
-    //   width   : 1.8%;
-    //   left    : 18.1%;
-    // }
-
-    #procuracao[type=text] {
-      position           : relative;
-      height             : 35px;
-      border             : 1px solid white;
-      bottom             : 65px;
-      left               : 30%;
-      text-align         : left;
-      background-color   : rgb(236, 236, 236);
-      background-image   : url('../../assets/images/searchIcon.svg');
-      background-position: 10px 10px;
-      background-repeat  : no-repeat;
-      padding            : 6px 0px 5px 40px;
-      border-radius      : 8px;
-      width              : 75px;
-      -webkit-transition : width 0.4s ease-in-out;
-      transition         : width 0.4s ease-in-out;
-      outline            : none;
-
-      &:focus[type=text] {
-        width : 39%;
-        border: none;
-      }
-
-      &::placeholder {
-        color      : rgb(156, 156, 156);
-        font-size  : 15px;
-        font-weight: 100;
-
-      }
+    #myInput{
+      display: none;
     }
   }
 
   #corpo {
-    .voltarHome {
-      position : absolute;
-      left     : 5%;
-      top      : 2.7%;
-      max-width: 100%;
-      width    : 27px;
-
-    }
+    width: 100%;
 
     .disfarce {
       position        : absolute;
       background-color: white;
       width           : 100%;
-      height          : 80vh;
+      height          : 100%;
     }
 
     .fotoPerfil {
@@ -143,196 +44,44 @@
       max-width    : 100%;
       width        : 272px;
       height       : 272px;
-      top          : 0px;
-      left         : 13.5%;
+      top          : 50px;
+      left         : 13.6%;
       border-radius: 150px;
-
-    }
-
-    .nome {
-      position : relative;
-      top      : 44%;
-      font-size: 25px;
-      left     : 26%;
     }
 
     .linha {
-      position: relative;
+      position: absolute;
       border  : 1px solid rgb(228, 227, 227);
-      top     : 50%;
+      top     : 420px;
+      width   : 100%;
     }
 
-    .email {
-      text-align: center;
-      position  : relative;
-      top       : 24%;
-      color     : #9a9a9a;
-      display   : none;
-    }
+    .nomeAbout {
+      position: absolute;
+      bottom  : 385px;
+      letter-spacing: .01428571em;
 
-
-    .mensagem {
-      position        : absolute;
-      color           : #313131;
-      text-align      : left;
-      top             : 58%;
-      border          : 1px solid rgb(221, 221, 221);
-      left            : 2%;
-      // margin       : 30px;
-      padding         : 0px 0px 5px 25px;
-      width           : 95%;
-      border-radius   : 12px;
-      box-sizing      : border-box;
-
-      .detalhes {
-        font-size     : 1rem;
-        font-weight   : 600;
-        letter-spacing: .01785714em;
+      .nome {
+        text-align: center;
+        font-size : 1.75rem;
       }
 
-      .telefone {
+      .about {
+        text-align    : center;
         font-size     : .875rem;
         letter-spacing: .01428571em;
+        top           : 5px
       }
-    }
-    .contato{
-      position        : absolute;
-      color           : #313131;
-      text-align      : left;
-      top             : 58%;
-      border          : 1px solid rgb(221, 221, 221);
-      left            : 2%;
-      // margin       : 30px;
-      padding         : 0px 0px 5px 25px;
-      width           : 95%;
-      border-radius   : 12px;
-      box-sizing      : border-box;
-    }
-  }
-}
-
-
-
-
-@media only screen and (min-width: 576px) {
-
-  .cabecalho {
-    .titulo {
-      position   : absolute;
-      top        : 17px;
-      display    : flex;
-      color      : rgb(75, 74, 74);
-      font-size  : 20px;
-      left       : 5.7%;
-      padding-top: 15px;
-    }
-
-    .img_perfil {
-      position : absolute;
-      max-width: 100%;
-      width    : 2.1%;
-      top      : 21px;
-      left     : 3.3%;
-    }
-
-    // .lupa {
-    //   position: absolute;
-    //   top     : 20px;
-    //   height  : 3.6%;
-    //   width   : 1.8%;
-    //   left    : 18.1%;
-    // }
-
-    #procuracao[type=text] {
-      position           : relative;
-      height             : 35px;
-      border             : 1px solid white;
-      bottom             : 79px;
-      left               : 18%;
-      text-align         : left;
-      background-color   : rgb(236, 236, 236);
-      background-image   : url('../../assets/images/searchIcon.svg');
-      background-position: 10px 10px;
-      background-repeat  : no-repeat;
-      padding            : 6px 0px 5px 40px;
-      border-radius      : 8px;
-      width              : 130px;
-      -webkit-transition : width 0.4s ease-in-out;
-      transition         : width 0.4s ease-in-out;
-      outline            : none;
-
-      &:focus[type=text] {
-        width : 50%;
-        border: none;
-      }
-
-      &::placeholder {
-        color      : rgb(156, 156, 156);
-        font-size  : 15px;
-        font-weight: 100;
-
-      }
-    }
-  }
-
-  #corpo {
-
-    .voltarHome {
-      position : absolute;
-      left     : 5%;
-      top      : 2.7%;
-      max-width: 100%;
-      width    : 27px;
-
-    }
-
-    .disfarce {
-      position        : absolute;
-      background-color: white;
-      width           : 100%;
-      height          : 80vh;
-    }
-
-    .fotoPerfil {
-      position     : absolute;
-      max-width    : 100%;
-      width        : 162px;
-      top          : 0px;
-      left         : 4%;
-      border-radius: 150px;
-    }
-
-    .nome {
-      position : relative;
-      top      : 8%;
-      font-size: 25px;
-      left     : 14%;
-    }
-
-    .linha {
-      position: relative;
-      border  : 1px solid rgb(228, 227, 227);
-      top     : 19%;
-    }
-
-    .email {
-      text-align: center;
-      position  : relative;
-      top       : 24%;
-      color     : #9a9a9a;
-      display   : none;
     }
 
     .mensagem {
       position     : absolute;
       color        : #313131;
-      // text-align: left;
-      top          : 21%;
       border       : 1px solid rgb(221, 221, 221);
-      left         : 1.5%;
-      margin       : 30px;
-      padding      : 0px 0px 5px 25px;
-      width        : 22%;
+      top          : 430px;
+      left         : 10px;
+      padding      : 10px 0px 0px 25px;
+      width        : 354px;
       border-radius: 12px;
       box-sizing   : border-box;
 
@@ -345,13 +94,220 @@
       .telefone {
         font-size     : .875rem;
         letter-spacing: .01428571em;
+        top           : 5px
+      }
+    }
+
+    .maisDetalhes {
+      position     : absolute;
+      color        : #313131;
+      border       : 1px solid rgb(221, 221, 221);
+      top          : 515px;
+      left         : 10px;
+      padding      : 10px 0px 0px 25px;
+      width        : 354px;
+      border-radius: 12px;
+      box-sizing   : border-box;
+
+      .emailHeader {
+        font-size     : 1rem;
+        font-weight   : 600;
+        letter-spacing: .01785714em;
+      }
+
+      .emailBaixo {
+        font-size     : .875rem;
+        letter-spacing: .01428571em;
+        top           : 5px
+      }
+    }
+
+    .dataAniversario {
+      position     : absolute;
+      color        : #313131;
+      border       : 1px solid rgb(221, 221, 221);
+      top          : 600px;
+      left         : 10px;
+      padding      : 10px 0px 0px 25px;
+      width        : 354px;
+      border-radius: 12px;
+      box-sizing   : border-box;
+
+      .aniversarioHeader {
+        font-size     : 1rem;
+        font-weight   : 600;
+        letter-spacing: .01785714em;
+      }
+
+      .aniversario {
+        font-size     : .875rem;
+        letter-spacing: .01428571em;
+        top           : 5px
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .geral {
+    padding: 0px 300px 0px 300px;
+  }
+
+  .cabecalho {
+
+    .titulo {
+      position : relative;
+      display  : flex;
+      color    : rgb(75, 74, 74);
+      font-size: 20px;
+      left     : 60px;
+      bottom   : 101px;
+    }
+
+    .img_perfil {
+      position : relative;
+      max-width: 100%;
+      width    : 45px;
+      bottom   : 70px;
+      left     : 5px;
+    }
+
+    #myInput[type=text] {
+      position           : relative;
+      height             : 45px;
+      border             : 1px solid white;
+      outline            : none;
+      bottom             : 120px;
+      left               : 75%;
+      text-align         : left;
+      background-color   : rgb(236, 236, 236);
+      background-image   : url('../../assets/images/searchIcon.svg');
+      background-position: 10px 10px;
+      background-repeat  : no-repeat;
+      padding            : 6px 0px 5px 40px;
+      border-radius      : 8px;
+      width              : 325px;
+
+      &::placeholder {
+        color      : rgb(156, 156, 156);
+        font-size  : 15px;
+        font-weight: 100;
       }
     }
   }
 
-  .cor{
-    position: absolute;
-    color: black;
-    border: 1px solid black;
+  #corpo {
+    width: 100%;
+
+    .disfarce {
+      position        : absolute;
+      background-color: white;
+      width           : 100%;
+      height          : 80vh;
+      bottom          : 3%;
+    }
+
+    .fotoPerfil {
+      position     : relative;
+      max-width    : 100%;
+      width        : 162px;
+      top          : 0px;
+      border-radius: 150px;
+    }
+
+    .nomeAbout {
+      position: relative;
+      bottom  : 110px;
+      left    : 175px;
+
+      .nome {
+        font-size: 1.75rem;
+        ;
+      }
+
+      .about {
+        font-size     : .875rem;
+        letter-spacing: .01428571em;
+        top           : 5px
+      }
+    }
+
+    .linha {
+      position: relative;
+      border  : 1px solid rgb(228, 227, 227);
+      bottom  : 50px;
+      width   : 1310px;
+    }
+
+    .mensagem {
+      position     : relative;
+      color        : #313131;
+      border       : 1px solid rgb(221, 221, 221);
+      bottom       : 40px;
+      padding      : 10px 0px 0px 25px;
+      width        : 400px;
+      border-radius: 12px;
+      box-sizing   : border-box;
+
+      .detalhes {
+        font-size     : 1rem;
+        font-weight   : 600;
+        letter-spacing: .01785714em;
+      }
+
+      .telefone {
+        font-size     : .875rem;
+        letter-spacing: .01428571em;
+        top           : 5px
+      }
+    }
+
+    .maisDetalhes {
+      position     : relative;
+      color        : #313131;
+      border       : 1px solid rgb(221, 221, 221);
+      bottom       : 116px;
+      left         : 420px;
+      padding      : 10px 0px 0px 25px;
+      width        : 460px;
+      border-radius: 12px;
+      box-sizing   : border-box;
+
+      .emailHeader {
+        font-size     : 1rem;
+        font-weight   : 600;
+        letter-spacing: .01785714em;
+      }
+
+      .emailBaixo {
+        font-size     : .875rem;
+        letter-spacing: .01428571em;
+        top           : 5px
+      }
+    }
+
+    .dataAniversario {
+      position     : relative;
+      color        : #313131;
+      border       : 1px solid rgb(221, 221, 221);
+      bottom       : 192.2px;
+      left         : 905px;
+      padding      : 10px 0px 0px 25px;
+      width        : 405px;
+      border-radius: 12px;
+      box-sizing   : border-box;
+
+      .aniversarioHeader {
+        font-size     : 1rem;
+        font-weight   : 600;
+        letter-spacing: .01785714em;
+      }
+
+      .aniversario {
+        font-size     : .875rem;
+        letter-spacing: .01428571em;
+        top           : 5px
+      }
+    }
   }
 }
