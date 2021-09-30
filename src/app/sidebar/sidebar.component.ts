@@ -26,7 +26,6 @@ export class SidebarComponent implements OnInit {
 
   contatos: Perfil[] = [];
   filterTerm: string = '';
-  displayedColumns: string[] = ['name', 'photo', 'email'];
   dataSource = new MatTableDataSource();
   private _url = '';
 

@@ -29,8 +29,6 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +38,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     DeleteUsuarioComponent,
     EditarUsuarioComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -62,9 +61,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     FontAwesomeModule,
     MatBottomSheetModule,
     MatStepperModule,
-    MatDatepickerModule
-
+    MatDatepickerModule,
   ],
+
   providers: [ContatoService, InfosService,
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 2000 } }],
   bootstrap: [AppComponent]
