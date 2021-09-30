@@ -1,19 +1,28 @@
+import { Perfil } from './perfil/perfil';
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { query } from '@angular/animations';
+
+const apiURL = "https://60c8b73dafc88600179f7da1.mockapi.io/contacts";
 
 @Injectable({
   providedIn: 'root'
 })
 export class InfosService {
-  
+
   constructor(private http: HttpClient) { }
 
+  getPerfil(): Observable<any> {
+    return this.http.get(apiURL);
+  }
 
-  listarInfoParametros(): Observable<any>{
-    let params = new HttpParams();
-    params = params.set('id', 15);
-    return this.http.get("https://60c8b73dafc88600179f7da1.mockapi.io/contacts/", {params: params})
+  getComponentPerfil(perfilId: string): Observable<Perfil[]> {
+    let params = new HttpParams().set("id", perfilId);
+    return this.http.get<Perfil[]>(apiURL, { params: params });
+  }
+
+  listarInfoParametros(id: number): Observable<any> {
+    const idurl = `${apiURL}${id}`;
+    return this.http.get<Perfil[]>(idurl);
   }
 }
