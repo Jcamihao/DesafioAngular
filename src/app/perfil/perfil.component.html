@@ -1,22 +1,41 @@
-<div id="geral" *ngFor="let info of infos">
-    <div id="header">
-        <a routerLink="">
-            <div class="voltarHome">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Antu_arrow-left.svg" alt="">
-            </div>
-        </a>
-        <div class="nomeHeader">{{info.name}}</div>
-    </div>
+<div class="geral">
+  <div class="cabecalho">
+    <img src="https://www.gstatic.com/images/branding/product/1x/contacts_48dp.png" alt="perfil contatos"
+      class="img_perfil">
+    <div class="titulo">Contatos</div>
+    <input id="myInput" type="text" placeholder="Pesquisar" onkeyup="myFunction()" />
+  </div>
 
+  <div class="classe" *ngFor="let info of infos">
     <div id="corpo">
-        <div class="disfarce">
-            <img [src]="info.photo" class="fotoPerfil">
+      <div class="disfarce">
 
-            <div class="nome">{{info.name}}</div>
+        <img [src]="info.photo" class="fotoPerfil">
 
-            <div class="email">{{info.email}}</div>
-
-            <div class="mensagem">{{info.about}}</div>
+        <div class="nomeAbout">
+          <p class="nome">{{info.name}} </p>
+          <p class="about">{{info.about}}</p>
         </div>
+
+        <div class="linha"></div>
+
+        <div class="mensagem">
+          <p class="detalhes">Telefone</p>
+          <p class="telefone">{{info.phone}}</p>
+        </div>
+
+        <div class="maisDetalhes">
+          <p class="emailHeader">Email</p>
+          <p class="emailBaixo">{{info.email}}</p>
+        </div>
+
+        <div class="dataAniversario">
+          <p class="aniversarioHeader">Aniversario</p>
+          <p class="aniversario">{{info.birthday | date: "dd/MM/yy"}}</p>
+        </div>
+
+
+      </div>
     </div>
+  </div>
 </div>

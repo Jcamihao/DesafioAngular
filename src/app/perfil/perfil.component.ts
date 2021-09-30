@@ -1,8 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { RouterModule, ActivatedRoute, Routes } from '@angular/router';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { RouterModule, ActivatedRoute, Routes, ParamMap, Router } from '@angular/router';
 import { InfosService } from './../infos.service';
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, Input, OnInit } from '@angular/core';
 import { Perfil } from './perfil';
 
 @Component({
@@ -13,16 +12,29 @@ import { Perfil } from './perfil';
 
 export class PerfilComponent implements OnInit {
 
-  infos: Array<any> = [];
+  infos: Array<Perfil> = [];
+  parentRouteId!: number;
+  public id!: number;
+  private sub: any;
 
-  constructor(private infosService: InfosService,
-     route: ActivatedRoute) {
-}
+  constructor(private infosService: InfosService, private route: ActivatedRoute, private http: HttpClient, private router: Router,) { }
 
-  ngOnInit(): void {
-    this.infosService.listarInfoParametros().subscribe(data => {this.infos = data})
+
+  conteudoPerfil(id: any) {
+    this.infosService.listarInfoParametros(id).subscribe(data => { this.infos = data });
   }
 
+  perfilSelecionado(perfilId: any) {
+    this.infosService.getComponentPerfil(perfilId).subscribe(data => { this.infos = data });
+  }
 
+  ngOnInit(): void {
+    this.route.params.subscribe((params: any) => {
+      this.id = params['id'];
+      this.perfilSelecionado(this.id);
+    });
+  }
 }
+
+
 
