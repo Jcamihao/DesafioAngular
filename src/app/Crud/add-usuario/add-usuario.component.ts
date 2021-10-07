@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subscriber } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ContatoService } from './../contato.service';
+import { ContatoService } from '../../contato.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -19,8 +19,6 @@ export class AddUsuarioComponent implements OnInit {
 
   photo!: File;
   isLinear = false;
-  firstFormGroup!: FormGroup;
-  secondFormGroup!: FormGroup;
   addUserForm: FormGroup = new FormGroup({});
   cd: any;
   url = "//ssl.gstatic.com/s2/oz/images/sge/grey_silhouette.png";

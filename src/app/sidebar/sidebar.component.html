@@ -3,8 +3,7 @@
     <img src="https://www.gstatic.com/images/branding/product/1x/contacts_48dp.png" alt="perfil contatos"
       class="img_perfil">
     <div class="titulo">Contatos</div>
-    <input id="myInput" type="text" placeholder="Pesquisar" [(ngModel)]="filterTerm"/>
-  </div>
+    <input id="myInput" type="text" placeholder="Pesquisar" (keyup)="onKeyUp($event.target)">
 
   <div class="procurar">
     <div id="searchBox">
@@ -16,7 +15,7 @@
   </div>
 
   <mat-card class="cartao">
-    <a [routerLink]="['/usuarionovo']">
+    <a [routerLink]="['/addcontato']">
       <div class="textocartao">Criar contato</div>
       <img src="https://pic.onlinewebfonts.com/svg/img_132694.png" class="imgcard">
     </a>
@@ -28,7 +27,7 @@
     </a>
   </mat-card>
 
-  <div id="contatos" *ngFor="let contato of contatos | filter: filterTerm">
+  <div id="contatos" *ngFor="let contato of contatos | filterByName: filter">
     <a [routerLink]="[ '/usuario', contato.id ]" (click)="onClick(contato.id)">
       <div class="conversa">
         <div class="avatar">

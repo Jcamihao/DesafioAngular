@@ -25,7 +25,8 @@ export interface Perfil {
 export class SidebarComponent implements OnInit {
 
   contatos: Perfil[] = [];
-  filterTerm: string = '';
+  // filterTerm: string = '';
+  filter: string = '';
   dataSource = new MatTableDataSource();
   private _url = '';
 
@@ -47,6 +48,13 @@ export class SidebarComponent implements OnInit {
 
   onClick(contatoId: number) {
     this.router.navigate(['usuario', contatoId]);
+  }
+
+  onKeyUp(target : any) {
+    if(target instanceof EventTarget) {
+      var elemento = target as HTMLInputElement;
+      this.filter = elemento.value;
+    }
   }
 }
 

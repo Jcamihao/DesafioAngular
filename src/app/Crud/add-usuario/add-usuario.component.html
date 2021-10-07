@@ -19,7 +19,7 @@
     </div>
 
     <p>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="standard" floatLabel="always">
         <mat-label>Nome</mat-label>
         <input matInput placeholder="Nome Completo" formControlName="name" required>
         <mat-error>Coloque o nome completo</mat-error>
@@ -27,9 +27,9 @@
     </p>
 
     <p>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="standard" floatLabel="always">
         <mat-label>E-mail</mat-label>
-        <input matInput placeholder="E-mail" formControlName="email" required>
+        <input matInput placeholder="Coloque seu e-mail" formControlName="email" required>
         <mat-error *ngIf="addUserForm.controls['email'].errors && addUserForm.controls['email'].hasError('required')">
           Coloque
           o email</mat-error>
@@ -40,9 +40,9 @@
     </p>
 
     <p>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="standard" floatLabel="always" >
         <mat-label>Telefone</mat-label>
-        <input matInput placeholder="Telefone" formControlName="phone" required>
+        <input matInput placeholder="Numero de telefone" formControlName="phone" required>
         <mat-error *ngIf="addUserForm.controls['phone'].errors && addUserForm.controls['phone'].hasError('required')">
           Coloque
           o telefone</mat-error>
@@ -52,16 +52,16 @@
     </p>
 
     <p>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="standard" floatLabel="always">
         <mat-label>Aniversario</mat-label>
-        <input matInput placeholder="Aniversario" formControlName="birthday">
+        <input matInput placeholder="Aniversario MM/dd/yyyy" formControlName="birthday">
       </mat-form-field>
     </p>
 
     <p>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="standard" floatLabel="always">
         <mat-label>Descrição</mat-label>
-        <input matInput placeholder="Descrição" formControlName="about">
+        <input matInput placeholder="Fale sobre o contato" formControlName="about">
       </mat-form-field>
     </p>
 

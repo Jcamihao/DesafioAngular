@@ -1,0 +1,45 @@
+<div class="container-sm">
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Login de usuario</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form [formGroup]="loginForm">
+
+        <p>
+          <mat-form-field appearance="outline" floatLabel="always">
+            <mat-label>E-Mail</mat-label>
+            <input matInput formControlName="email" type="text" class="" placeholder="E-Mail" autofocus>
+            <mat-error *ngIf="loginForm.controls['email'].errors && loginForm.controls['email'].hasError('email')">
+              E-Mail invalido
+            </mat-error>
+            <mat-error *ngIf="loginForm.controls['email'].errors && loginForm.controls['email'].hasError('required')">
+              Coloque seu E-mail
+            </mat-error>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="outline" floatLabel="always">
+            <mat-label>Senha</mat-label>
+            <input matInput formControlName="password" [type]="hide ? 'password' : 'text'"
+              placeholder="Coloque Sua Senha">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error
+              *ngIf="loginForm.controls['password'].errors && loginForm.controls['password'].hasError('required')">
+              Coloque sua senha
+            </mat-error>
+          </mat-form-field>
+        </p>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Login</button>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
