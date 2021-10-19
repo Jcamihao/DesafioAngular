@@ -1,3 +1,5 @@
+import { ApiService } from './API/api.service';
+import { SignUpService } from './signup/signup.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +32,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FilterByName } from './sidebar/filterByName.pipe';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
+import { AuthService } from './signin/auth.service';
+
 
 @NgModule({
   declarations: [
@@ -68,7 +72,7 @@ import { SignupComponent } from './signup/signup.component';
     MatDatepickerModule,
   ],
 
-  providers: [ContatoService, InfosService,
+  providers: [ContatoService, InfosService, SignUpService, AuthService, ApiService,
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 2000 } }],
   bootstrap: [AppComponent]
 })

@@ -45,7 +45,7 @@ export class AddUsuarioComponent implements OnInit {
   createUser() {
     this.contatoService.addUser(this.addUserForm.value).subscribe(data => {
       this._snackBar.open("Contato criado com sucesso");
-      this.route.navigate(['']);
+      this.route.navigate(['home']);
     }, err => {
       this._snackBar.open("Por favor, coloque um arquivo de foto mais leve.");
     });

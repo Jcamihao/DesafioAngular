@@ -57,10 +57,9 @@ export class EditarUsuarioComponent implements OnInit {
   updateUser() {
     this.contatoService.updateUser(this.userId, this.editUserForm.value).subscribe(data => {
       this._snackBar.open("Contato atualizado com sucesso");
-      this.route.navigate(['']);
+      this.route.navigate(['home']);
     }, err => {
       this._snackBar.open("Não foi possivel atualizar o contato");
-      // this.route.navigate(['']);
     });
   }
 

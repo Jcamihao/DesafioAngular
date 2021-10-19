@@ -1,25 +1,34 @@
 <div class="container-sm">
   <mat-card>
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>Login de usuario</mat-card-title>
     </mat-card-header>
-
+    <br>
     <mat-card-content>
-      <form [formGroup]="loginForm">
+      <form [formGroup]="loginForm" (submit)="login()">
 
         <p>
           <mat-form-field appearance="outline" floatLabel="always">
-            <mat-label>E-Mail</mat-label>
-            <input matInput formControlName="email" type="text" class="" placeholder="E-Mail" autofocus>
-            <mat-error *ngIf="loginForm.controls['email'].errors && loginForm.controls['email'].hasError('email')">
-              E-Mail invalido
-            </mat-error>
-            <mat-error *ngIf="loginForm.controls['email'].errors && loginForm.controls['email'].hasError('required')">
+            <mat-label>Nome de usuario</mat-label>
+            <input matInput formControlName="userName" type="text" class="" placeholder="Nome de usuario" autofocus>
+            <mat-error *ngIf="loginForm.controls['userName'].errors && loginForm.controls['userName'].hasError('required')">
               Coloque seu E-mail
             </mat-error>
           </mat-form-field>
         </p>
+
+        <!-- <p>
+          <mat-form-field appearance="outline" floatLabel="always">
+            <mat-label>E-Mail</mat-label>
+            <input matInput formControlName="emailLogin" type="text" class="" placeholder="E-Mail" autofocus>
+            <mat-error *ngIf="loginForm.controls['emailLogin'].errors && loginForm.controls['emailLogin'].hasError('email')">
+              E-Mail invalido
+            </mat-error>
+            <mat-error *ngIf="loginForm.controls['emailLogin'].errors && loginForm.controls['emailLogin'].hasError('required')">
+              Coloque seu E-mail
+            </mat-error>
+          </mat-form-field>
+        </p> -->
 
         <p>
           <mat-form-field appearance="outline" floatLabel="always">
@@ -36,6 +45,8 @@
             </mat-error>
           </mat-form-field>
         </p>
+
+        <p>Ainda não está cadastrado? <a [routerLink]="['/registrar']">Registre-se aqui</a></p>
 
         <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Login</button>
 

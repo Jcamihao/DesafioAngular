@@ -25,11 +25,11 @@ export class DeleteUsuarioComponent implements OnInit {
     if (this.userId) {
       this.contatoService.deleteUser(this.userId).subscribe(data => {
         this._snackBar.open("Contato deletado");
-        this.route.navigate(['']);
+        this.route.navigate(['home']);
       }, err => {
         this._snackBar.open("Não foi póssivel deletar o contato");
-        this.route.navigate(['']);
-      })
+        this.route.navigate(['home']);
+      });
     }
   }
 
