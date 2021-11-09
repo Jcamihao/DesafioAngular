@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "projetolistaangular": {
+      "hosting": {
+        "listadesafio": [
+          "angulardesafio"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "projetolistaangular"
+  }
+}

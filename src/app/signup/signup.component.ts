@@ -18,7 +18,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class SignupComponent implements OnInit {
   hide = true;
 
-  registerform: FormGroup = new FormGroup({});
+  registerform: FormGroup = new FormGroup({});  
 
   constructor(
     private formBuilder: FormBuilder,
@@ -29,8 +29,6 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerform = this.formBuilder.group({
-      // email: ['', Validators.required],
-      // password: ['', Validators.required],
       emailLogin: new FormControl('', [Validators.required, Validators.email]),
       userName: new FormControl('', [
         Validators.required,
