@@ -1,6 +1,11 @@
 import { ApiService } from './../API/api.service';
 
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  FormControl,
+} from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -10,50 +15,56 @@ import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.scss']
+  styleUrls: ['./signin.component.scss'],
 })
 export class SigninComponent implements OnInit {
-
   hide = true;
+  users: any = [];
 
   loginForm: FormGroup = new FormGroup({});
 
-  constructor(private formBuilder: FormBuilder,
-    private authService: AuthService,
+  constructor(
+    private formBuilder: FormBuilder,
+    private apiService: ApiService,
     private _snackBar: MatSnackBar,
-    private router: Router,
-    private apiService: ApiService) { }
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      // email: ['', Validators.required],
-      // password: ['', Validators.required],
-      'userName': new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(40),]),
-      // 'emailLogin': new FormControl('', [Validators.required, Validators.email]),
-      'password': new FormControl('', [Validators.required, Validators.minLength(4)]),
+      email: new FormControl('', [
+        Validators.required,
+        Validators.minLength(2),
+        Validators.maxLength(40),
+      ]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(4),
+      ]),
+    });
+
+    localStorage.clear();
+    this.apiService.getUser().subscribe((data: any) => {
+      console.log(data);
+      this.users = data;
     });
   }
 
-  login() {
+  login(data: any) {
+    // console.log(data);
 
-    if (this.loginForm.invalid) {
-      return;
+    if (data.email) {
+      this.users.forEach((item: any) => {
+        if (item.email === data.email && item.password === data.password) {
+          localStorage.setItem('isLoggedIn', 'true');
+          this._snackBar.open('Login feito com sucesso');
+          this.router.navigate(['home']);
+        } else {
+          console.log(data);
+          this._snackBar.open('Falha no login. Por favor, cheque as credenciais');
+          localStorage.clear();
+        }
+      });
     }
-
-    this.authService.login(this.loginForm.value).pipe(
-      map(token => this.router.navigate(['home']))
-    ).subscribe();
-
-
-    // const emailLogin = this.loginForm.get('emailLogin')?.value;
-    // const userName = this.loginForm.get('userName')?.value;
-    // const password = this.loginForm.get('password')?.value;
-
-    // this.authService.authenticate(emailLogin, password, userName).subscribe(() => {
-    //   this.router.navigateByUrl('home');
-    //   this._snackBar.open("Login efetuado!");
-    // }, err => {
-    //   this._snackBar.open("Confira suas credenciais e tente de novo.");
-    // });
   }
 }

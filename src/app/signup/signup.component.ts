@@ -1,3 +1,4 @@
+import { ApiService } from './../API/api.service';
 import { Router } from '@angular/router';
 import { SignUpService } from './signup.service';
 import { NewUser } from './new-user';
@@ -18,19 +19,24 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class SignupComponent implements OnInit {
   hide = true;
 
-  registerform: FormGroup = new FormGroup({});  
+  registerform: FormGroup = new FormGroup({});
 
   constructor(
     private formBuilder: FormBuilder,
     private signupService: SignUpService,
     private router: Router,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+    private api: ApiService
   ) {}
 
   ngOnInit(): void {
+    this.api.getAllData().subscribe((res) => {
+      console.log(res, 'res==>');
+    });
+
     this.registerform = this.formBuilder.group({
-      emailLogin: new FormControl('', [Validators.required, Validators.email]),
-      userName: new FormControl('', [
+      email: new FormControl('', [Validators.required, Validators.email]),
+      fullname: new FormControl('', [
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(40),
@@ -45,17 +51,18 @@ export class SignupComponent implements OnInit {
   }
 
   signup() {
-    const newUser = this.registerform.getRawValue() as NewUser;
-    this.signupService.signup(newUser).subscribe(
-      () => {
-        this._snackBar.open('Cadastro feito com sucesso');
-        this.router.navigate(['']);
-      },
-      (err) => {
-        this._snackBar.open(
-          'Cadastro não pode ser completado. Reveja seus dados'
-        );
-      }
-    );
+    if (this.registerform.valid) {
+      console.log(this.registerform.value);
+      this.api.createData(this.registerform.value).subscribe((res) => {
+        console.log(res, 'res==>');
+      });
+      this.registerform.reset();
+      this._snackBar.open('Cadastro feito com sucesso');
+      this.router.navigate(['']);
+    } else {
+      this._snackBar.open(
+        'Cadastro não pode ser completado. Reveja seus dados'
+      );
+    }
   }
 }

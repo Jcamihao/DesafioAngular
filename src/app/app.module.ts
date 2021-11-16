@@ -11,7 +11,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule } from '@angular/material/snack-bar';
+import {
+  MAT_SNACK_BAR_DEFAULT_OPTIONS,
+  MatSnackBarModule,
+} from '@angular/material/snack-bar';
 import { MatSortModule } from '@angular/material/sort';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTableModule } from '@angular/material/table';
@@ -33,9 +36,7 @@ import { AuthService } from './signin/auth.service';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { SignUpService } from './signup/signup.service';
-
-
-
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -74,8 +75,14 @@ import { SignUpService } from './signup/signup.service';
     MatDatepickerModule,
   ],
 
-  providers: [ContatoService, InfosService, SignUpService, AuthService, ApiService,
-    { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 2000 } }],
-  bootstrap: [AppComponent]
+  providers: [
+    ContatoService,
+    InfosService,
+    SignUpService,
+    AuthService,
+    ApiService,
+    { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 2000 } },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

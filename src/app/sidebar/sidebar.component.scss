@@ -1,51 +1,49 @@
 @media only screen and (max-width: 576px) {
-
   .container-xxl {
-    margin : 0px;
+    margin: 0px;
     padding: 0px;
   }
 
   .cabecalho {
     position: absolute;
-    left    : 3px;
+    left: 3px;
 
     .titulo {
-      position : relative;
-      display  : flex;
-      color    : rgb(75, 74, 74);
+      position: relative;
+      display: flex;
+      color: rgb(75, 74, 74);
       font-size: 20px;
-      left     : 60px;
-      bottom   : 90px;
+      left: 60px;
+      bottom: 90px;
     }
 
     .img_perfil {
-      position : relative;
+      position: relative;
       max-width: 100%;
-      width    : 50px;
-      bottom   : 58px;
-      left     : 5px;
+      width: 50px;
+      bottom: 58px;
+      left: 5px;
     }
 
-    #myInput[type=text] {
-      position           : relative;
-      height             : 45px;
-      border             : 1px solid white;
-      outline            : none;
-      bottom             : 121px;
-      left               : 78%;
-      text-align         : left;
-      background-color   : rgb(236, 236, 236);
-      background-image   : url('../../assets/images/searchIcon.svg');
+    #myInput[type="text"] {
+      position: relative;
+      height: 45px;
+      border: 1px solid white;
+      outline: none;
+      bottom: 121px;
+      left: 55%;
+      text-align: left;
+      background-color: rgb(236, 236, 236);
+      background-image: url("../../assets/images/searchIcon.svg");
       background-position: 10px 10px;
-      background-repeat  : no-repeat;
-      padding            : 6px 0px 5px 40px;
-      border-radius      : 8px;
-      width              : 100%;
-
+      background-repeat: no-repeat;
+      padding: 6px 0px 5px 40px;
+      border-radius: 8px;
+      width: 160px;
 
       &::placeholder {
-        color      : rgb(156, 156, 156);
-        font-size  : 15px;
+        color: rgb(156, 156, 156);
+        font-size: 15px;
         font-weight: 100;
       }
     }
@@ -53,18 +51,17 @@
 
   .procurar {
     position: absolute;
-    top     : 125px;
-    width   : 100%;
+    top: 125px;
+    width: 100%;
 
     .contato_header {
-      position      : absolute;
-      top           : 15px;
-      font-size     : 12px;
+      position: absolute;
+      top: -25px;
+      font-size: 12px;
       text-transform: uppercase;
-      color         : rgb(112, 112, 112);
-      font-weight   : 600;
-      left          : 14px;
-
+      color: rgb(112, 112, 112);
+      font-weight: 600;
+      left: 14px;
     }
 
     .email_header {
@@ -78,41 +75,45 @@
 
   .linha {
     position: relative;
-    border  : 1px solid rgb(216, 215, 215);
-    width   : 100%;
-    top     : 65px;
+    border: 1px solid rgb(216, 215, 215);
+    width: 100%;
+    top: 5px;
+  }
+
+  .cartao-logout {
+    display: none;
   }
 
   #contatos {
     .conversa {
-      top     : 120px;
+      top: 20px;
       position: relative;
-      height  : 75px;
-      display : flex;
+      height: 75px;
+      display: flex;
 
       &:hover {
         background-color: #eeecec;
       }
 
       .avatar {
-        flex-basis     : 73px;
-        height         : 100%;
-        display        : flex;
-        align-items    : center;
+        flex-basis: 73px;
+        height: 100%;
+        display: flex;
+        align-items: center;
         justify-content: center;
 
         img {
-          max-width    : 100%;
-          width        : 70%;
+          max-width: 100%;
+          width: 70%;
           border-radius: 95px;
         }
       }
 
       .nome {
-        font-size  : .875rem;
+        font-size: 0.875rem;
         line-height: 1.25rem;
         padding-top: 20px;
-        color      : rgb(73, 73, 73);
+        color: rgb(73, 73, 73);
       }
 
       .conteudo {
@@ -120,8 +121,8 @@
         padding: 10px 0px 0px 0px;
 
         .nome {
-          display        : flex;
-          flex-direction : row;
+          display: flex;
+          flex-direction: row;
           justify-content: space-between;
         }
 
@@ -142,36 +143,35 @@
 
   a {
     text-decoration: none;
-    color          : black;
+    color: black;
   }
-
 
   .dropdown {
     position: relative;
-    display : inline-block;
-    top     : 64px;
-    left    : 335px;
+    display: inline-block;
+    top: -32px;
+    left: 335px;
   }
 
   .dropdown-content {
-    display         : none;
-    position        : absolute;
+    display: none;
+    position: absolute;
     background-color: #f9f9f9;
-    min-width       : 160px;
-    right           : 20px;
-    box-shadow      : 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index         : 1;
+    min-width: 160px;
+    right: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
   }
 
   .dropdown-content a {
-    color          : black;
-    padding        : 12px 16px;
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
-    display        : block;
+    display: block;
   }
 
   .dropdown-content a:hover {
-    background-color: #f1f1f1
+    background-color: #f1f1f1;
   }
 
   .dropdown:hover .dropdown-content {
@@ -183,68 +183,81 @@
   }
 
   .cartaophone {
-    position     : absolute;
+    position: fixed;
     border-radius: 50px;
-    height       : 50px;
-    width        : 50px;
-    font-weight  : 600;
-    left         : 300px;
-    top          : 740px;
+    height: 50px;
+    width: 50px;
+    font-weight: 600;
+    left: 250px;
+    top: 150px;
 
     .imgcard {
       position: absolute;
-      height  : 20px;
+      height: 20px;
     }
 
     .textocartao {
-      position   : absolute;
+      position: absolute;
       margin-left: 30px;
+    }
+  }
+
+  .cartao-logout-mb {
+    position: fixed;
+    left: 310px;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    font-weight: 600;
+    top: 150px;
+
+    .imgcard-logout {
+      position: absolute;
+      height: 20px;
     }
   }
 }
 
 @media only screen and (min-width: 577px) {
-
   .cabecalho {
     width: 100%;
 
     .titulo {
-      position : relative;
-      display  : flex;
-      color    : rgb(75, 74, 74);
+      position: relative;
+      display: flex;
+      color: rgb(75, 74, 74);
       font-size: 20px;
-      left     : 60px;
-      bottom   : 90px;
+      left: 60px;
+      bottom: 90px;
     }
 
     .img_perfil {
-      position : relative;
+      position: relative;
       max-width: 100%;
-      width    : 3.5%;
-      bottom   : 58px;
-      left     : 5px;
+      width: 3.5%;
+      bottom: 58px;
+      left: 5px;
     }
 
-    #myInput[type=text] {
-      position           : relative;
-      height             : 45px;
-      border             : 1px solid white;
-      outline            : none;
-      bottom             : 120px;
-      left               : 75%;
-      text-align         : left;
-      background-color   : rgb(236, 236, 236);
-      background-image   : url('../../assets/images/searchIcon.svg');
+    #myInput[type="text"] {
+      position: relative;
+      height: 45px;
+      border: 1px solid white;
+      outline: none;
+      bottom: 120px;
+      left: 75%;
+      text-align: left;
+      background-color: rgb(236, 236, 236);
+      background-image: url("../../assets/images/searchIcon.svg");
       background-position: 10px 10px;
-      background-repeat  : no-repeat;
-      padding            : 6px 0px 5px 40px;
-      border-radius      : 8px;
-      width              : 25%;
-
+      background-repeat: no-repeat;
+      padding: 6px 0px 5px 40px;
+      border-radius: 8px;
+      width: 25%;
 
       &::placeholder {
-        color      : rgb(156, 156, 156);
-        font-size  : 15px;
+        color: rgb(156, 156, 156);
+        font-size: 15px;
         font-weight: 100;
       }
     }
@@ -252,84 +265,83 @@
 
   .procurar {
     position: absolute;
-    top     : 125px;
-    width   : 75%;
+    top: 125px;
+    width: 75%;
 
     #procuracaodois {
       display: none;
     }
 
     .contato_header {
-      position      : absolute;
-      top           : 15px;
-      font-size     : 12px;
+      position: absolute;
+      top: 15px;
+      font-size: 12px;
       text-transform: uppercase;
-      color         : rgb(112, 112, 112);
-      font-weight   : 600;
-      left          : 14px;
-
+      color: rgb(112, 112, 112);
+      font-weight: 600;
+      left: 14px;
     }
 
     .email_header {
-      position      : absolute;
-      top           : 15px;
-      font-size     : 12px;
+      position: absolute;
+      top: 15px;
+      font-size: 12px;
       text-transform: uppercase;
-      color         : rgb(112, 112, 112);
-      font-weight   : 600;
-      left          : 520px;
+      color: rgb(112, 112, 112);
+      font-weight: 600;
+      left: 520px;
     }
 
     .phone_header {
-      position      : absolute;
-      top           : 15px;
-      font-size     : 12px;
+      position: absolute;
+      top: 15px;
+      font-size: 12px;
       text-transform: uppercase;
-      color         : rgb(112, 112, 112);
-      font-weight   : 600;
-      left          : 1032px;
+      color: rgb(112, 112, 112);
+      font-weight: 600;
+      left: 1032px;
     }
   }
 
   .linha {
     position: relative;
-    border  : 1px solid rgb(216, 215, 215);
-    width   : 1295px;
-    top     : 65px;
+    border: 1px solid rgb(216, 215, 215);
+    width: 1295px;
+    top: 65px;
   }
 
   #contatos {
     width: 100%;
 
     .conversa {
-      top     : 15px;
+      top: 15px;
       position: relative;
-      height  : 75px;
-      display : flex;
+      height: 75px;
+      display: flex;
 
       &:hover {
         background-color: #eeecec;
       }
 
       .avatar {
-        flex-basis     : 73px;
-        height         : 100%;
-        display        : flex;
-        align-items    : center;
+        flex-basis: 73px;
+        height: 100%;
+        display: flex;
+        align-items: center;
         justify-content: center;
 
         img {
-          max-width    : 100%;
-          width        : 70%;
+          max-width: 100%;
+          width: 70%;
           border-radius: 95px;
         }
       }
 
       .nome {
-        font-size  : .875rem;
+        font-size: 0.875rem;
         line-height: 1.25rem;
         padding-top: 20px;
-        color      : rgb(73, 73, 73);
+        color: rgb(73, 73, 73);
       }
 
       .conteudo {
@@ -337,25 +349,25 @@
         padding: 10px 0px 0px 0px;
 
         .nome {
-          display        : flex;
-          flex-direction : row;
+          display: flex;
+          flex-direction: row;
           justify-content: space-between;
         }
 
         .email {
-          position : absolute;
-          bottom   : 30px;
-          font-size: .875rem;
-          color    : rgb(73, 73, 73);
-          left     : 40%;
+          position: absolute;
+          bottom: 30px;
+          font-size: 0.875rem;
+          color: rgb(73, 73, 73);
+          left: 40%;
         }
 
         .phone {
-          position : absolute;
-          bottom   : 30px;
-          font-size: .875rem;
-          color    : rgb(73, 73, 73);
-          left     : 80%;
+          position: absolute;
+          bottom: 30px;
+          font-size: 0.875rem;
+          color: rgb(73, 73, 73);
+          left: 80%;
         }
       }
     }
@@ -367,35 +379,34 @@
 
   a {
     text-decoration: none;
-    color          : black;
+    color: black;
   }
-
 
   .dropdown {
     position: relative;
-    display : inline-block;
-    top     : -44px;
-    left    : 95%;
+    display: inline-block;
+    top: -44px;
+    left: 95%;
   }
 
   .dropdown-content {
-    display         : none;
-    position        : absolute;
+    display: none;
+    position: absolute;
     background-color: #f9f9f9;
-    min-width       : 160px;
-    box-shadow      : 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index         : 1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
   }
 
   .dropdown-content a {
-    color          : black;
-    padding        : 12px 16px;
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
-    display        : block;
+    display: block;
   }
 
   .dropdown-content a:hover {
-    background-color: #f1f1f1
+    background-color: #f1f1f1;
   }
 
   .dropdown:hover .dropdown-content {
@@ -403,20 +414,40 @@
   }
 
   .cartao {
-    position     : relative;
+    position: relative;
     border-radius: 50px;
-    height       : 50px;
-    width        : 150px;
-    font-weight  : 600;
+    height: 50px;
+    width: 150px;
+    font-weight: 600;
 
     .imgcard {
       position: absolute;
-      height  : 20px;
+      height: 20px;
     }
 
     .textocartao {
-      position   : absolute;
+      position: absolute;
       margin-left: 30px;
+    }
+  }
+
+  .cartao-logout {
+    position: absolute;
+    left: 77%;
+    border-radius: 50px;
+    height: 50px;
+    width: 120px;
+    font-weight: 600;
+    top: 205px;
+
+    .imgcard-logout {
+      position: absolute;
+      height: 20px;
+    }
+
+    .textocartao {
+      position: absolute;
+      margin-left: 35px;
     }
   }
 

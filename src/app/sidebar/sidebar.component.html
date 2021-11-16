@@ -1,54 +1,89 @@
-<div class="container-xxl">
+<div class="container">
   <div class="cabecalho">
-    <img src="https://www.gstatic.com/images/branding/product/1x/contacts_48dp.png" alt="perfil contatos"
-      class="img_perfil">
+    <img
+      src="https://www.gstatic.com/images/branding/product/1x/contacts_48dp.png"
+      alt="perfil contatos"
+      class="img_perfil"
+    />
     <div class="titulo">Contatos</div>
-    <input id="myInput" type="text" placeholder="Pesquisar" (keyup)="onKeyUp($event.target)">
+    <input
+      id="myInput"
+      type="text"
+      placeholder="Pesquisar"
+      (keyup)="onKeyUp($event.target)"
+    />
 
-  <div class="procurar">
-    <div id="searchBox">
-      <div class="contato_header">Contatos</div>
-      <div class="email_header">Email</div>
-      <div class="phone_header">Telefone</div>
-      <div class="linha"></div>
-    </div>
-  </div>
-
-  <mat-card class="cartao">
-    <a [routerLink]="['/addcontato']">
-      <div class="textocartao">Criar contato</div>
-      <img src="https://pic.onlinewebfonts.com/svg/img_132694.png" class="imgcard">
-    </a>
-  </mat-card>
-
-  <mat-card class="cartaophone">
-    <a [routerLink]="['/usuarionovo']">
-      <img src="https://pic.onlinewebfonts.com/svg/img_132694.png" class="imgcard">
-    </a>
-  </mat-card>
-
-  <div id="contatos" *ngFor="let contato of contatos | filterByName: filter">
-    <a [routerLink]="[ '/usuario', contato.id ]" (click)="onClick(contato.id)">
-      <div class="conversa">
-        <div class="avatar">
-          <img [src]="contato.photo">
-        </div>
-        <div class="conteudo">
-          <div class="nome">{{contato.name}}</div>
-          <div class="email" >{{contato.email}}</div>
-          <div class="phone" >{{contato.phone}}</div>
-        </div>
-      </div>
-    </a>
-    <div class="dropdown">
-      <button mat-icon-button>
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <div class="dropdown-content">
-        <a [routerLink]="['/excluir', contato.id]">Deletar</a>
-        <a [routerLink]="['/editarusuario', contato.id]">Editar</a>
+    <div class="procurar">
+      <div id="searchBox">
+        <div class="contato_header">Contatos</div>
+        <div class="email_header">Email</div>
+        <div class="phone_header">Telefone</div>
+        <div class="linha"></div>
       </div>
     </div>
+
+
+    <mat-card class="cartao">
+      <a [routerLink]="['/addcontato']">
+        <div class="textocartao">Criar contato</div>
+        <img
+          src="https://pic.onlinewebfonts.com/svg/img_132694.png"
+          class="imgcard"
+        />
+      </a>
+    </mat-card>
+
+    <mat-card class="cartao-logout">
+      <a [routerLink]="['']" (click)="logout()">
+        <div class="textocartao">Logout</div>
+        <img
+          src="https://pic.onlinewebfonts.com/svg/img_376344.png"
+          class="imgcard-logout"
+        />
+      </a>
+    </mat-card>
+
+    <mat-card class="cartao-logout-mb">
+      <a [routerLink]="['']" (click)="logout()">
+        <img
+          src="https://pic.onlinewebfonts.com/svg/img_376344.png"
+          class="imgcard-logout"
+        />
+      </a>
+    </mat-card>
+
+    <mat-card class="cartaophone">
+      <a [routerLink]="['/addcontato']">
+        <img
+          src="https://pic.onlinewebfonts.com/svg/img_132694.png"
+          class="imgcard"
+        />
+      </a>
+    </mat-card>
+
+    <div id="contatos" *ngFor="let contato of contatos | filterByName: filter">
+      <a [routerLink]="['/usuario', contato.id]" (click)="onClick(contato.id)">
+        <div class="conversa">
+          <div class="avatar">
+            <img [src]="contato.photo" />
+          </div>
+          <div class="conteudo">
+            <div class="nome">{{ contato.name }}</div>
+            <div class="email">{{ contato.email }}</div>
+            <div class="phone">{{ contato.phone }}</div>
+          </div>
+        </div>
+      </a>
+      <div class="dropdown">
+        <button mat-icon-button>
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <div class="dropdown-content">
+          <a [routerLink]="['/excluir', contato.id]">Deletar</a>
+          <a [routerLink]="['/editarusuario', contato.id]">Editar</a>
+        </div>
+      </div>
+    </div>
   </div>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>

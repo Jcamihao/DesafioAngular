@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { SignupComponent } from './signup/signup.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', component: SigninComponent },
@@ -14,12 +15,12 @@ const routes: Routes = [
   { path: 'excluir/:id', component: DeleteUsuarioComponent },
   { path: 'addcontato', component: AddUsuarioComponent },
   { path: 'editarusuario/:id', component: EditarUsuarioComponent },
-  { path: 'home', component: SidebarComponent },
+  { path: 'home', component: SidebarComponent, canActivate: [AuthGuard] },
   { path: 'registrar', component: SignupComponent },
-]
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

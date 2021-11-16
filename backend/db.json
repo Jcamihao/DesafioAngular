@@ -1,0 +1,22 @@
+{
+  "user": [
+    {
+      "email": "johnmarcus3210@gmail.com",
+      "fullname": "João Marcos Cabral dos Santos",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "email": "johnmarcus3210@gmail.com",
+      "fullname": "João Marcos Cabral dos Santos",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "email": "johnmarcus3210@gmail.com",
+      "fullname": "João Marcos Cabral dos Santos",
+      "password": "123123",
+      "id": 3
+    }
+  ]
+}

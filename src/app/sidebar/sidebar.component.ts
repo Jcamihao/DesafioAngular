@@ -19,42 +19,48 @@ export interface Perfil {
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+  styleUrls: ['./sidebar.component.scss'],
 })
-
 export class SidebarComponent implements OnInit {
-
   contatos: Perfil[] = [];
   // filterTerm: string = '';
   filter: string = '';
   dataSource = new MatTableDataSource();
   private _url = '';
 
-  @Input() set url(url: string){
-    if(!url.startsWith('data')){
+  @Input() set url(url: string) {
+    if (!url.startsWith('data')) {
       this._url = contatosUrl + url;
-    } else this._url = url
+    } else this._url = url;
   }
 
-  constructor(private contatoService: ContatoService, private route: ActivatedRoute, private router: Router, private http: HttpClient) { }
+  constructor(
+    private contatoService: ContatoService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private http: HttpClient
+  ) {}
 
   ngOnInit(): void {
     this.listar();
   }
 
   listar() {
-    this.contatoService.listar().subscribe(dados => this.contatos = dados);
+    this.contatoService.listar().subscribe((dados) => (this.contatos = dados));
   }
 
   onClick(contatoId: number) {
     this.router.navigate(['usuario', contatoId]);
   }
 
-  onKeyUp(target : any) {
-    if(target instanceof EventTarget) {
+  onKeyUp(target: any) {
+    if (target instanceof EventTarget) {
       var elemento = target as HTMLInputElement;
       this.filter = elemento.value;
     }
   }
-}
 
+  logout() {
+    localStorage.clear();
+  }
+}

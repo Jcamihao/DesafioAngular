@@ -1,54 +1,137 @@
 <div class="container-sm">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>Login de usuario</mat-card-title>
+  <mat-card class="logincartao">
+    <mat-card-header class="header">
+      <img src="../../assets/images/joaocaminhaoedit.png" class="logo" />
+      <div class="titulo">Fazer login</div>
     </mat-card-header>
-    <br>
+    <br />
     <mat-card-content>
-      <form [formGroup]="loginForm" (submit)="login()">
+      <!-- <form [formGroup]="loginForm" class="formulario">
+        <mat-stepper orientation="vertical" #stepper>
+          <mat-step [stepControl]="loginForm">
+              <ng-template matStepLabel>Coloque com seu E-mail</ng-template>
+              <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input
+                  matInput
+                  placeholder="Coloque seu email"
+                  formControlName="email"
+                  required
+                />
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperNext>Proximo</button>
+              </div>
+          </mat-step>
+          <mat-step [stepControl]="loginForm">
+              <ng-template matStepLabel>Coloque sua senha</ng-template>
+              <mat-form-field appearance="outline">
+                <mat-label>Senha</mat-label>
+                <input
+                  matInput
+                  formControlName="password"
+                  placeholder="Coloque sua senha"
+                  required
+                />
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious>Voltar</button>
+              </div>
+          </mat-step>
+        </mat-stepper>
 
+        <p class="cadastrar">
+          Ainda não está cadastrado?
+          <a [routerLink]="['/registrar']">Registre-se aqui</a>
+        </p>
+
+        <button
+          mat-raised-button
+          class="botaosubmit"
+          color="primary"
+          type="submit"
+          (click)="login(loginForm.value)"
+          [disabled]="!loginForm.valid"
+        >
+          Login
+        </button>
+      </form> -->
+
+      <form [formGroup]="loginForm" class="formulario">
         <p>
-          <mat-form-field appearance="outline" floatLabel="always">
-            <mat-label>Nome de usuario</mat-label>
-            <input matInput formControlName="userName" type="text" class="" placeholder="Nome de usuario" autofocus>
-            <mat-error *ngIf="loginForm.controls['userName'].errors && loginForm.controls['userName'].hasError('required')">
+          <mat-form-field appearance="outline" floatLabel="always" class="formfield">
+            <mat-label>E-Mail</mat-label>
+            <input
+              matInput
+              formControlName="email"
+              type="text"
+              placeholder="E-Mail"
+              autofocus
+              class="emailForm"
+            />
+            <mat-error
+              *ngIf="
+                loginForm.controls['email'].errors &&
+                loginForm.controls['email'].hasError('email')
+              "
+            >
+              E-Mail invalido
+            </mat-error>
+            <mat-error
+              *ngIf="
+                loginForm.controls['email'].errors &&
+                loginForm.controls['email'].hasError('required')
+              "
+            >
               Coloque seu E-mail
             </mat-error>
           </mat-form-field>
         </p>
 
-        <!-- <p>
-          <mat-form-field appearance="outline" floatLabel="always">
-            <mat-label>E-Mail</mat-label>
-            <input matInput formControlName="emailLogin" type="text" class="" placeholder="E-Mail" autofocus>
-            <mat-error *ngIf="loginForm.controls['emailLogin'].errors && loginForm.controls['emailLogin'].hasError('email')">
-              E-Mail invalido
-            </mat-error>
-            <mat-error *ngIf="loginForm.controls['emailLogin'].errors && loginForm.controls['emailLogin'].hasError('required')">
-              Coloque seu E-mail
-            </mat-error>
-          </mat-form-field>
-        </p> -->
-
         <p>
-          <mat-form-field appearance="outline" floatLabel="always">
+          <mat-form-field appearance="outline" floatLabel="always" class="formfield">
             <mat-label>Senha</mat-label>
-            <input matInput formControlName="password" [type]="hide ? 'password' : 'text'"
-              placeholder="Coloque Sua Senha">
-            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-              [attr.aria-pressed]="hide">
-              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <input
+              matInput
+              formControlName="password"
+              [type]="hide ? 'password' : 'text'"
+              placeholder="Coloque Sua Senha"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
             </button>
             <mat-error
-              *ngIf="loginForm.controls['password'].errors && loginForm.controls['password'].hasError('required')">
+              *ngIf="
+                loginForm.controls['password'].errors &&
+                loginForm.controls['password'].hasError('required')
+              "
+            >
               Coloque sua senha
             </mat-error>
           </mat-form-field>
         </p>
 
-        <p>Ainda não está cadastrado? <a [routerLink]="['/registrar']">Registre-se aqui</a></p>
+        <button
+          mat-raised-button
+          class="botaosubmit"
+          color="primary"
+          type="submit"
+          (click)="login(loginForm.value)"
+          [disabled]="!loginForm.valid"
+        >
+          Login
+        </button>
 
-        <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Login</button>
+        <p class="cadastrar">
+          Ainda não tem cadastro?
+          <a [routerLink]="['/registrar']">Registre-se aqui</a>
+        </p>
 
       </form>
     </mat-card-content>

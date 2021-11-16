@@ -1,70 +1,148 @@
 <div class="container-xxl">
   <div class="cabecalho">
-    <img src="https://www.gstatic.com/images/branding/product/1x/contacts_48dp.png" alt="perfil contatos"
-      class="img_perfil">
+    <img
+      src="https://www.gstatic.com/images/branding/product/1x/contacts_48dp.png"
+      alt="perfil contatos"
+      class="img_perfil"
+    />
     <div class="titulo">Contatos</div>
-    <input id="myInput" type="text" placeholder="Pesquisar" />
   </div>
 
   <form [formGroup]="addUserForm" (submit)="createUser()" class="formulario">
-
     <div class="linha"></div>
-    <img [src]=url class="addfoto">
+    <img [src]="url" class="addfoto" />
 
     <div class="botaoImagem">
       <div class="cameraborder"></div>
-      <img src="../../assets/images/photo-camera.png" alt="" class="camera">
-      <input type="file" (change)="onFileChange($event)" (change)="onselecrFile($event)" accept="image/*"
-        id="show-or-hide" class="btn" />
+      <img src="../../assets/images/photo-camera.png" alt="" class="camera" />
+      <input
+        type="file"
+        (change)="onFileChange($event)"
+        (change)="onselecrFile($event)"
+        accept="image/*"
+        id="show-or-hide"
+        class="btn"
+      />
     </div>
 
     <p>
-      <mat-form-field appearance="standard" floatLabel="always">
+      <mat-form-field
+        appearance="outline"
+        floatLabel="always"
+        class="formfield"
+      >
         <mat-label>Nome</mat-label>
-        <input matInput placeholder="Nome Completo" formControlName="name" required>
+        <input
+          matInput
+          placeholder="Nome Completo"
+          formControlName="name"
+          required
+        />
         <mat-error>Coloque o nome completo</mat-error>
       </mat-form-field>
     </p>
 
     <p>
-      <mat-form-field appearance="standard" floatLabel="always">
+      <mat-form-field
+        appearance="outline"
+        floatLabel="always"
+        class="formfield"
+      >
         <mat-label>E-mail</mat-label>
-        <input matInput placeholder="Coloque seu e-mail" formControlName="email" required>
-        <mat-error *ngIf="addUserForm.controls['email'].errors && addUserForm.controls['email'].hasError('required')">
-          Coloque
-          o email</mat-error>
-        <mat-error *ngIf="addUserForm.controls['email'].errors && addUserForm.controls['email'].hasError('email')">
-          Endereço de email
-          não é valido</mat-error>
+        <input
+          matInput
+          placeholder="Coloque seu e-mail"
+          formControlName="email"
+          required
+        />
+        <mat-error
+          *ngIf="
+            addUserForm.controls['email'].errors &&
+            addUserForm.controls['email'].hasError('required')
+          "
+        >
+          Coloque o email</mat-error
+        >
+        <mat-error
+          *ngIf="
+            addUserForm.controls['email'].errors &&
+            addUserForm.controls['email'].hasError('email')
+          "
+        >
+          Endereço de email não é valido</mat-error
+        >
       </mat-form-field>
     </p>
 
     <p>
-      <mat-form-field appearance="standard" floatLabel="always" >
+      <mat-form-field
+        appearance="outline"
+        floatLabel="always"
+        class="formfield"
+      >
         <mat-label>Telefone</mat-label>
-        <input matInput placeholder="Numero de telefone" formControlName="phone" required>
-        <mat-error *ngIf="addUserForm.controls['phone'].errors && addUserForm.controls['phone'].hasError('required')">
-          Coloque
-          o telefone</mat-error>
-        <mat-error *ngIf="addUserForm.controls['phone'].errors && addUserForm.controls['phone'].hasError('maxlength')">
-          Coloque 10 digitos</mat-error>
+        <input
+          matInput
+          placeholder="Numero de telefone"
+          formControlName="phone"
+          required
+        />
+        <mat-error
+          *ngIf="
+            addUserForm.controls['phone'].errors &&
+            addUserForm.controls['phone'].hasError('required')
+          "
+        >
+          Coloque o telefone</mat-error
+        >
+        <mat-error
+          *ngIf="
+            addUserForm.controls['phone'].errors &&
+            addUserForm.controls['phone'].hasError('maxlength')
+          "
+        >
+          Coloque 10 digitos</mat-error
+        >
       </mat-form-field>
     </p>
 
     <p>
-      <mat-form-field appearance="standard" floatLabel="always">
+      <mat-form-field
+        appearance="outline"
+        floatLabel="always"
+        class="formfield"
+      >
         <mat-label>Aniversario</mat-label>
-        <input matInput placeholder="Aniversario MM/dd/yyyy" formControlName="birthday">
+        <input
+          matInput
+          placeholder="Aniversario MM/dd/yyyy"
+          formControlName="birthday"
+        />
       </mat-form-field>
     </p>
 
     <p>
-      <mat-form-field appearance="standard" floatLabel="always">
+      <mat-form-field
+        appearance="outline"
+        floatLabel="always"
+        class="formfield"
+      >
         <mat-label>Descrição</mat-label>
-        <input matInput placeholder="Fale sobre o contato" formControlName="about">
+        <input
+          matInput
+          placeholder="Fale sobre o contato"
+          formControlName="about"
+        />
       </mat-form-field>
     </p>
 
-    <button mat-raised-button color="primary" [disabled]="!addUserForm.valid" class="botaoSubmit">Salvar</button>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!addUserForm.valid"
+      class="botaoSubmit"
+    >
+      Salvar
+    </button>
   </form>
 </div>

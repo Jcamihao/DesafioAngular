@@ -1,17 +1,18 @@
 <div class="container-sm">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>Registrar usuario</mat-card-title>
-    </mat-card-header>
+  <mat-card class="logincartao">
+      <mat-card-header class="header">
+        <img src="../../assets/images/joaocaminhaoedit.png" class="logo" />
+        <div class="titulo">Cadastre-se</div>
+      </mat-card-header>
     <br />
     <mat-card-content>
-      <form [formGroup]="registerform" (submit)="signup()">
+      <form [formGroup]="registerform" class="formulario">
         <p>
-          <mat-form-field appearance="outline" floatLabel="always">
+          <mat-form-field appearance="outline" floatLabel="always" class="formfield">
             <mat-label>Nome Completo</mat-label>
             <input
               matInput
-              formControlName="userName"
+              formControlName="fullname"
               type="text"
               class=""
               placeholder="Nome Completo"
@@ -19,8 +20,8 @@
             />
             <mat-error
               *ngIf="
-                registerform.controls['userName'].errors &&
-                registerform.controls['userName'].hasError('required')
+                registerform.controls['fullname'].errors &&
+                registerform.controls['fullname'].hasError('required')
               "
             >
               Digite seu nome completo.
@@ -29,27 +30,27 @@
         </p>
 
         <p>
-          <mat-form-field appearance="outline" floatLabel="always">
+          <mat-form-field appearance="outline" floatLabel="always" class="formfield">
             <mat-label>E-Mail</mat-label>
             <input
               matInput
-              formControlName="emailLogin"
+              formControlName="email"
               type="text"
               class=""
               placeholder="E-Mail"
             />
             <mat-error
               *ngIf="
-                registerform.controls['emailLogin'].errors &&
-                registerform.controls['emailLogin'].hasError('email')
+                registerform.controls['email'].errors &&
+                registerform.controls['email'].hasError('email')
               "
             >
               E-Mail invalido.
             </mat-error>
             <mat-error
               *ngIf="
-                registerform.controls['emailLogin'].errors &&
-                registerform.controls['emailLogin'].hasError('required')
+                registerform.controls['email'].errors &&
+                registerform.controls['email'].hasError('required')
               "
             >
               Coloque seu E-mail.
@@ -57,14 +58,14 @@
           </mat-form-field>
         </p>
 
-        <p>
-          <mat-form-field appearance="outline" floatLabel="always">
+        <p class="senhaform">
+          <mat-form-field appearance="outline" floatLabel="always" class="formfield">
             <mat-label>Senha</mat-label>
             <input
               matInput
               formControlName="password"
               [type]="hide ? 'password' : 'text'"
-              placeholder="Senha de 9 caracteres"
+              placeholder="Coloque Sua Senha"
             />
             <button
               mat-icon-button
@@ -77,35 +78,11 @@
             </button>
             <mat-error
               *ngIf="
-                registerform.controls['password'].errors &&
-                registerform.controls['password'].hasError('required')
+              registerform.controls['password'].errors &&
+              registerform.controls['password'].hasError('required')
               "
             >
-              Coloque sua senha.
-            </mat-error>
-            <mat-error
-              *ngIf="
-                registerform.controls['password'].errors &&
-                registerform.controls['password'].hasError('minlength')
-              "
-            >
-              Sua senha deve ter mais que 4 caracteres
-            </mat-error>
-            <mat-error
-              *ngIf="
-                registerform.controls['password'].errors &&
-                registerform.controls['password'].hasError('maxlength')
-              "
-            >
-              Sua senha deve ter menos que 10 caracteres
-            </mat-error>
-            <mat-error
-              *ngIf="
-                registerform.controls['password'].errors &&
-                registerform.controls['password'].hasError('pattern')
-              "
-            >
-              Sua senha deve conter apenas numeros e letras minusculas.
+              Coloque sua senha
             </mat-error>
           </mat-form-field>
         </p>
@@ -115,6 +92,8 @@
           mat-raised-button
           color="primary"
           type="submit"
+          class="botaosubmit"
+          (click)="signup()"
           [disabled]="!registerform.valid"
         >
           Registrar

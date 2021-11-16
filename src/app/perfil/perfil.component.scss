@@ -1,31 +1,23 @@
 @media only screen and (max-width: 576px) {
-
   .cabecalho {
-    width : 100%;
-    margin: 0px;
-
-    width : 100%;
+    width: 100%;
     margin: 0px;
 
     .titulo {
-      position : absolute;
-      bottom   : 765px;
-      display  : flex;
-      color    : rgb(75, 74, 74);
+      position: absolute;
+      bottom: 765px;
+      display: flex;
+      color: rgb(75, 74, 74);
       font-size: 20px;
-      left     : 72px;
+      left: 72px;
     }
 
     .img_perfil {
-      position : absolute;
+      position: absolute;
       max-width: 100%;
-      width    : 13%;
-      bottom   : 750px;
-      left     : 20px;
-    }
-
-    #myInput{
-      display: none;
+      width: 13%;
+      bottom: 750px;
+      left: 20px;
     }
   }
 
@@ -33,116 +25,117 @@
     width: 100%;
 
     .disfarce {
-      position        : absolute;
+      position: absolute;
       background-color: white;
-      width           : 100%;
-      height          : 100%;
+      width: 100%;
+      height: 100%;
     }
 
     .fotoPerfil {
-      position     : absolute;
-      max-width    : 100%;
-      width        : 272px;
-      height       : 272px;
-      top          : 50px;
-      left         : 13.6%;
+      position: absolute;
+      max-width: 100%;
+      width: 272px;
+      height: 272px;
+      top: 50px;
+      left: 13.6%;
       border-radius: 150px;
     }
 
     .linha {
       position: absolute;
-      border  : 1px solid rgb(228, 227, 227);
-      top     : 420px;
-      width   : 100%;
+      border: 1px solid rgb(228, 227, 227);
+      top: 415px;
+      width: 100%;
     }
 
     .nomeAbout {
       position: absolute;
-      bottom  : 385px;
-      letter-spacing: .01428571em;
+      bottom: 400px;
+      left: 120px;
+      letter-spacing: 0.01428571em;
 
       .nome {
         text-align: center;
-        font-size : 1.75rem;
+        font-size: 1.75rem;
       }
 
       .about {
-        text-align    : center;
-        font-size     : .875rem;
-        letter-spacing: .01428571em;
-        top           : 5px
+        text-align: center;
+        font-size: 0.875rem;
+        letter-spacing: 0.01428571em;
+        top: 5px;
       }
     }
 
     .mensagem {
-      position     : absolute;
-      color        : #313131;
-      border       : 1px solid rgb(221, 221, 221);
-      top          : 430px;
-      left         : 10px;
-      padding      : 10px 0px 0px 25px;
-      width        : 354px;
+      position: absolute;
+      color: #313131;
+      border: 1px solid rgb(221, 221, 221);
+      top: 430px;
+      left: 10px;
+      padding: 10px 0px 0px 25px;
+      width: 354px;
       border-radius: 12px;
-      box-sizing   : border-box;
+      box-sizing: border-box;
 
       .detalhes {
-        font-size     : 1rem;
-        font-weight   : 600;
-        letter-spacing: .01785714em;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.01785714em;
       }
 
       .telefone {
-        font-size     : .875rem;
-        letter-spacing: .01428571em;
-        top           : 5px
+        font-size: 0.875rem;
+        letter-spacing: 0.01428571em;
+        top: 5px;
       }
     }
 
     .maisDetalhes {
-      position     : absolute;
-      color        : #313131;
-      border       : 1px solid rgb(221, 221, 221);
-      top          : 515px;
-      left         : 10px;
-      padding      : 10px 0px 0px 25px;
-      width        : 354px;
+      position: absolute;
+      color: #313131;
+      border: 1px solid rgb(221, 221, 221);
+      top: 515px;
+      left: 10px;
+      padding: 10px 0px 0px 25px;
+      width: 354px;
       border-radius: 12px;
-      box-sizing   : border-box;
+      box-sizing: border-box;
 
       .emailHeader {
-        font-size     : 1rem;
-        font-weight   : 600;
-        letter-spacing: .01785714em;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.01785714em;
       }
 
       .emailBaixo {
-        font-size     : .875rem;
-        letter-spacing: .01428571em;
-        top           : 5px
+        font-size: 0.875rem;
+        letter-spacing: 0.01428571em;
+        top: 5px;
       }
     }
 
     .dataAniversario {
-      position     : absolute;
-      color        : #313131;
-      border       : 1px solid rgb(221, 221, 221);
-      top          : 600px;
-      left         : 10px;
-      padding      : 10px 0px 0px 25px;
-      width        : 354px;
+      position: absolute;
+      color: #313131;
+      border: 1px solid rgb(221, 221, 221);
+      top: 600px;
+      left: 10px;
+      padding: 10px 0px 0px 25px;
+      width: 354px;
       border-radius: 12px;
-      box-sizing   : border-box;
+      box-sizing: border-box;
 
       .aniversarioHeader {
-        font-size     : 1rem;
-        font-weight   : 600;
-        letter-spacing: .01785714em;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.01785714em;
       }
 
       .aniversario {
-        font-size     : .875rem;
-        letter-spacing: .01428571em;
-        top           : 5px
+        font-size: 0.875rem;
+        letter-spacing: 0.01428571em;
+        top: 5px;
       }
     }
   }
@@ -154,43 +147,42 @@
   }
 
   .cabecalho {
-
     .titulo {
-      position : relative;
-      display  : flex;
-      color    : rgb(75, 74, 74);
+      position: relative;
+      display: flex;
+      color: rgb(75, 74, 74);
       font-size: 20px;
-      left     : 60px;
-      bottom   : 101px;
+      left: 60px;
+      bottom: 101px;
     }
 
     .img_perfil {
-      position : relative;
+      position: relative;
       max-width: 100%;
-      width    : 45px;
-      bottom   : 70px;
-      left     : 5px;
+      width: 45px;
+      bottom: 70px;
+      left: 5px;
     }
 
-    #myInput[type=text] {
-      position           : relative;
-      height             : 45px;
-      border             : 1px solid white;
-      outline            : none;
-      bottom             : 120px;
-      left               : 75%;
-      text-align         : left;
-      background-color   : rgb(236, 236, 236);
-      background-image   : url('../../assets/images/searchIcon.svg');
+    #myInput[type="text"] {
+      position: relative;
+      height: 45px;
+      border: 1px solid white;
+      outline: none;
+      bottom: 120px;
+      left: 75%;
+      text-align: left;
+      background-color: rgb(236, 236, 236);
+      background-image: url("../../assets/images/searchIcon.svg");
       background-position: 10px 10px;
-      background-repeat  : no-repeat;
-      padding            : 6px 0px 5px 40px;
-      border-radius      : 8px;
-      width              : 325px;
+      background-repeat: no-repeat;
+      padding: 6px 0px 5px 40px;
+      border-radius: 8px;
+      width: 325px;
 
       &::placeholder {
-        color      : rgb(156, 156, 156);
-        font-size  : 15px;
+        color: rgb(156, 156, 156);
+        font-size: 15px;
         font-weight: 100;
       }
     }
@@ -200,113 +192,112 @@
     width: 100%;
 
     .disfarce {
-      position        : absolute;
+      position: absolute;
       background-color: white;
-      width           : 100%;
-      height          : 80vh;
-      bottom          : 3%;
+      width: 100%;
+      height: 80vh;
+      bottom: 3%;
     }
 
     .fotoPerfil {
-      position     : relative;
-      max-width    : 100%;
-      width        : 162px;
-      top          : 0px;
+      position: relative;
+      max-width: 100%;
+      width: 162px;
+      top: 0px;
       border-radius: 150px;
     }
 
     .nomeAbout {
       position: relative;
-      bottom  : 110px;
-      left    : 175px;
+      bottom: 110px;
+      left: 175px;
 
       .nome {
         font-size: 1.75rem;
-        ;
       }
 
       .about {
-        font-size     : .875rem;
-        letter-spacing: .01428571em;
-        top           : 5px
+        font-size: 0.875rem;
+        letter-spacing: 0.01428571em;
+        top: 5px;
       }
     }
 
     .linha {
       position: relative;
-      border  : 1px solid rgb(228, 227, 227);
-      bottom  : 50px;
-      width   : 1310px;
+      border: 1px solid rgb(228, 227, 227);
+      bottom: 50px;
+      width: 1310px;
     }
 
     .mensagem {
-      position     : relative;
-      color        : #313131;
-      border       : 1px solid rgb(221, 221, 221);
-      bottom       : 40px;
-      padding      : 10px 0px 0px 25px;
-      width        : 400px;
+      position: relative;
+      color: #313131;
+      border: 1px solid rgb(221, 221, 221);
+      bottom: 40px;
+      padding: 10px 0px 0px 25px;
+      width: 400px;
       border-radius: 12px;
-      box-sizing   : border-box;
+      box-sizing: border-box;
 
       .detalhes {
-        font-size     : 1rem;
-        font-weight   : 600;
-        letter-spacing: .01785714em;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.01785714em;
       }
 
       .telefone {
-        font-size     : .875rem;
-        letter-spacing: .01428571em;
-        top           : 5px
+        font-size: 0.875rem;
+        letter-spacing: 0.01428571em;
+        top: 5px;
       }
     }
 
     .maisDetalhes {
-      position     : relative;
-      color        : #313131;
-      border       : 1px solid rgb(221, 221, 221);
-      bottom       : 116px;
-      left         : 420px;
-      padding      : 10px 0px 0px 25px;
-      width        : 460px;
+      position: relative;
+      color: #313131;
+      border: 1px solid rgb(221, 221, 221);
+      bottom: 116px;
+      left: 420px;
+      padding: 10px 0px 0px 25px;
+      width: 460px;
       border-radius: 12px;
-      box-sizing   : border-box;
+      box-sizing: border-box;
 
       .emailHeader {
-        font-size     : 1rem;
-        font-weight   : 600;
-        letter-spacing: .01785714em;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.01785714em;
       }
 
       .emailBaixo {
-        font-size     : .875rem;
-        letter-spacing: .01428571em;
-        top           : 5px
+        font-size: 0.875rem;
+        letter-spacing: 0.01428571em;
+        top: 5px;
       }
     }
 
     .dataAniversario {
-      position     : relative;
-      color        : #313131;
-      border       : 1px solid rgb(221, 221, 221);
-      bottom       : 192.2px;
-      left         : 905px;
-      padding      : 10px 0px 0px 25px;
-      width        : 405px;
+      position: relative;
+      color: #313131;
+      border: 1px solid rgb(221, 221, 221);
+      bottom: 192.2px;
+      left: 905px;
+      padding: 10px 0px 0px 25px;
+      width: 405px;
       border-radius: 12px;
-      box-sizing   : border-box;
+      box-sizing: border-box;
 
       .aniversarioHeader {
-        font-size     : 1rem;
-        font-weight   : 600;
-        letter-spacing: .01785714em;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.01785714em;
       }
 
       .aniversario {
-        font-size     : .875rem;
-        letter-spacing: .01428571em;
-        top           : 5px
+        font-size: 0.875rem;
+        letter-spacing: 0.01428571em;
+        top: 5px;
       }
     }
   }

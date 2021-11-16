@@ -1,0 +1,104 @@
+@media only screen and (max-width: 576px) {
+  .logincartao {
+    max-width: 100%;
+    width: 330px;
+    height: 450px;
+    left: 10px;
+    outline: 0.1px solid rgb(219, 219, 219);
+  }
+
+  .header {
+    .titulo {
+      top: 105px;
+      position: relative;
+      left: 50px;
+      font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+    }
+
+    .logo {
+      position: absolute;
+      width: 80%;
+      top: 25px;
+      right: 31px;
+    }
+  }
+
+  .formulario {
+    position: relative;
+    top: 110px;
+
+    .botaosubmit {
+      position: relative;
+      width: 110px;
+      top: -15px;
+      left: 20px;
+      font-family: "Google Sans", Roboto, Arial, sans-serif;
+      letter-spacing: 0.0107142857em;
+    }
+
+    .cadastrar {
+      position: relative;
+      white-space: normal;
+      color: #5f6368;
+      left: 21px;
+      top: 5px;
+      // width: 200px;
+    }
+    .formfield {
+      left: 20px;
+      width: 88%;
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .logincartao {
+    // background-color: aqua;
+    width: 500px;
+    height: 480px;
+    left: 380px;
+    outline: 0.1px solid rgb(219, 219, 219);
+  }
+
+  .header {
+    .titulo {
+      top: 115px;
+      position: relative;
+      left: 135px;
+      font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+    }
+
+    .logo {
+      position: absolute;
+      top: 25px;
+      right: 55px;
+    }
+  }
+
+  .formulario {
+    position: relative;
+    top: 130px;
+
+    .botaosubmit {
+      position: relative;
+      width: 110px;
+      top: 5px;
+      font-family: "Google Sans", Roboto, Arial, sans-serif;
+      letter-spacing: 0.0107142857em;
+    }
+
+    .cadastrar {
+      position: relative;
+      white-space: normal;
+      color: #5f6368;
+    }
+    .formfield {
+      left: 35px;
+      width: 85%;
+    }
+  }
+}
