@@ -1,6 +1,5 @@
 @media only screen and (max-width: 576px) {
   .logincartao {
-    max-width: 100%;
     width: 330px;
     height: 450px;
     left: 10px;
@@ -9,7 +8,7 @@
 
   .header {
     .titulo {
-      top: 105px;
+      top: 80px;
       position: relative;
       left: 50px;
       font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
@@ -19,15 +18,15 @@
 
     .logo {
       position: absolute;
-      width: 80%;
+      width: 100%;
       top: 25px;
-      right: 31px;
+      right: 0px;
     }
   }
 
   .formulario {
     position: relative;
-    top: 110px;
+    top: 100px;
 
     .botaosubmit {
       position: relative;
@@ -64,7 +63,7 @@
 
   .header {
     .titulo {
-      top: 115px;
+      top: 105px;
       position: relative;
       left: 135px;
       font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
@@ -75,7 +74,7 @@
     .logo {
       position: absolute;
       top: 25px;
-      right: 55px;
+      right: 0;
     }
   }
 
@@ -86,7 +85,8 @@
     .botaosubmit {
       position: relative;
       width: 110px;
-      top: 5px;
+      top: -5px;
+      left: 35px;
       font-family: "Google Sans", Roboto, Arial, sans-serif;
       letter-spacing: 0.0107142857em;
     }
@@ -95,7 +95,10 @@
       position: relative;
       white-space: normal;
       color: #5f6368;
+      top: 15px;
+      left: 35px;
     }
+
     .formfield {
       left: 35px;
       width: 85%;

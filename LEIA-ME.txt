@@ -1,0 +1,19 @@
+Instruções para instalação e abertura do projeto:
+
+Necessario ter duas instancias do CMD abertas, uma para o back-end e outra para o front-end.
+
+Para o back-end {
+	Abra uma instancia do CMD na pasta "backend".
+
+	Digite "npm i" para instalar os pacotes usados dentro do back-end.
+
+	Ainda dentro da pasta "backend" no CMD, digite o comando: "json-server db.json". Esse comando vai abrir o servidor do back-end onde será armazenados os dados do seu cadastro.
+}
+
+Para o front-end{
+	Abra outra instancia do CMD na pasta "listadesafio".
+
+	Digite "npm i" para instalar os pacotes do Angular 12 usados no projeto do front-end.
+
+	Dentro da pasta "listadesafio" no CMD, digite "ng s -o" para o projeto ser compilado e aberto no seu browser padrão
+}

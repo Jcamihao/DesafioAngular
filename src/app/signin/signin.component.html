@@ -1,7 +1,7 @@
 <div class="container-sm">
   <mat-card class="logincartao">
     <mat-card-header class="header">
-      <img src="../../assets/images/joaocaminhaoedit.png" class="logo" />
+      <img src="../../assets/images/contatoslogoedit.png" class="logo" />
       <div class="titulo">Fazer login</div>
     </mat-card-header>
     <br />
@@ -59,7 +59,11 @@
 
       <form [formGroup]="loginForm" class="formulario">
         <p>
-          <mat-form-field appearance="outline" floatLabel="always" class="formfield">
+          <mat-form-field
+            appearance="outline"
+            floatLabel="always"
+            class="formfield"
+          >
             <mat-label>E-Mail</mat-label>
             <input
               matInput
@@ -89,7 +93,11 @@
         </p>
 
         <p>
-          <mat-form-field appearance="outline" floatLabel="always" class="formfield">
+          <mat-form-field
+            appearance="outline"
+            floatLabel="always"
+            class="formfield"
+          >
             <mat-label>Senha</mat-label>
             <input
               matInput
@@ -132,7 +140,6 @@
           Ainda não tem cadastro?
           <a [routerLink]="['/registrar']">Registre-se aqui</a>
         </p>
-
       </form>
     </mat-card-content>
   </mat-card>
