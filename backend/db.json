@@ -17,6 +17,12 @@
       "fullname": "João Marcos Cabral dos Santos",
       "password": "123123",
       "id": 3
+    },
+    {
+      "email": "mock@mail.com",
+      "fullname": "john",
+      "password": "159357",
+      "id": 4
     }
   ]
 }

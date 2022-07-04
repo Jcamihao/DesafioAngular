@@ -61,7 +61,9 @@ export class SigninComponent implements OnInit {
           this.router.navigate(['home']);
         } else {
           console.log(data);
-          this._snackBar.open('Falha no login. Por favor, cheque as credenciais');
+          this._snackBar.open(
+            'Falha no login. Por favor, cheque as credenciais'
+          );
           localStorage.clear();
         }
       });

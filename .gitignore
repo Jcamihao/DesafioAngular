@@ -8,6 +8,7 @@
 /bazel-out
 
 # dependencies
+/vscode
 /node_modules
 
 # profiling files

@@ -11,10 +11,22 @@ import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', component: SigninComponent },
-  { path: 'usuario/:id', component: PerfilComponent },
-  { path: 'excluir/:id', component: DeleteUsuarioComponent },
-  { path: 'addcontato', component: AddUsuarioComponent },
-  { path: 'editarusuario/:id', component: EditarUsuarioComponent },
+  { path: 'usuario/:id', component: PerfilComponent, canActivate: [AuthGuard] },
+  {
+    path: 'excluir/:id',
+    component: DeleteUsuarioComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'addcontato',
+    component: AddUsuarioComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'editarusuario/:id',
+    component: EditarUsuarioComponent,
+    canActivate: [AuthGuard],
+  },
   { path: 'home', component: SidebarComponent, canActivate: [AuthGuard] },
   { path: 'registrar', component: SignupComponent },
 ];
